@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 2.0;
+}
+
+@font-face {
+    font-family: 'Aileron-UltraLight';
+    src: url('/static/fonts/aileron_0102/Aileron-UltraLight.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Aileron-Regular';
+    src: url('/static/fonts/aileron_0102/Aileron-Light.otf') format('opentype');
+}
+
+body {
+    background-image: url('/static/Images/hans.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Aileron-UltraLight', sans-serif;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7); /* Zmieniona wartość alfa */
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin-bottom: 50px; /* Dodajemy większy margines na dole */
+
+}
+
+header {
+    background: none; /* Usunięcie tła */
+    padding: 0; /* Usunięcie wewnętrznego odstępu */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie elementów */
+    width: 100%; /* Wypełnienie całej szerokości */
+}
+
+nav ul li {
+    background: rgba(0, 0, 0, 0.3); /* Kolor tła dla kafelków */
+    padding: 10px 20px; /* Dodatkowy padding dla lepszego wyglądu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    margin: 0 5px; /* Odstęp między elementami */
+}
+nav ul li:hover {
+    background: rgba(0, 0, 0, 0.5); /* Nowy kolor tła po najechaniu myszką */
+    transition: background 0.3s ease; /* Płynna animacja zmiany koloru */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-left:20px;
+}
+
+.article h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Aileron-Regular', sans-serif;
+}
+.article h3{
+    font-size:2em;
+    margin-bottom: 10px;
+    font-family:'Aileron-Regular',sans-serif;
+}
+
+
+.article p {
+    margin-bottom: 20px;
+}
+
+.article .content {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.article .image {
+    flex: 1;
+}
+
+.article .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.read-more {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.read-more a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-style: italic;
+}
+
+.read-more a:hover {
+    color: #555;
+}
