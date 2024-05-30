@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my page!</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="static/css/main.css">
     <style>
         body {
-            background: url('{{ url_for("static", filename="Images/hans.jpg") }}') no-repeat center center fixed;
+            background: url('static/Images//hans.jpg') no-repeat center center fixed;
             background-size: cover;
-            overflow-y: auto; /* Dodajemy pionowe przewijanie dla całej strony */
+            overflow-y: auto; 
         }
         main {
             padding: 20px 0;
@@ -21,9 +21,9 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">About Me</a></li>
-                    <li><a href="{{ url_for('index') }}">Articles</a></li>
+                    <li><a href="index.html">Articles</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -35,7 +35,7 @@
                     <h2><a>GoodFoodMVC</a></h2>
                     <p>The GoodFood Project is a community-driven recipe sharing platform built on the ASP.NET MVC (Model-View-Controller) framework. Unlike traditional websites, MVC separates the application logic into three interconnected components: the Model (data and business logic), the View (user interface), and the Controller (handles user input and interacts with the model and view).</p>
                     <div class="read-more">
-                        <a href="{{url_for('second',article='article1')}}">Read more</a>
+                        <a href="Articles/GoodFoodMVC.html">Read more</a>
                     </div>
                 </div>
                 
@@ -49,12 +49,12 @@
                     <h2><a>MLVehiclePricePredictor</a></h2>
                     <p>Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
                     <div class="read-more">
-                        <a href="{{url_for('second', article='article2')}}">Read more</a>
+                        <a href="Articles/MLVehiclePriceAdvisor.html">Read more</a>
                     </div>
                 </div>
                 
                 <div class="image">
-                    <img src="{{ url_for('static', filename='Images/random-forest.png') }}" alt="Random Forest">
+                    <img src="static//Images//random-forest.png" alt="Random Forest">
                 </div>
             </section>
             <section class="article">
@@ -62,7 +62,7 @@
                     <h2><a>RailTripPlanner-WPF</a></h2>
                     <p>Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
                     <div class="read-more">
-                        <a href="{{url_for('second', article='article3')}}">Read more</a>
+                        <a href="Articles/PKP-ICAA-WPF.html">Read more</a>
                     </div>
                 </div>
                 
