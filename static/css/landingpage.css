@@ -1,0 +1,248 @@
+/* Przeniesione i zaktualizowane style z main.css */
+
+/* Ogólne style resetujące */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Czcionki */
+@font-face {
+    font-family: 'Font-UltraLight';
+    src: url('/static/fonts/Barlow/Barlow-ExtraLight.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'Font-Regular';
+    src: url('/static/fonts/Barlow/Barlow-Regular.ttf') format('opentype');
+}
+
+/* Stylowanie ciała strony */
+body {
+    background-image: url('/static/Images/hans.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Font-UltraLight', sans-serif;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7); 
+    width: 80%;
+    max-width: 1200px;
+    margin: auto; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin-bottom: 50px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    transition:height 0.5s ease-in-out;
+}
+
+
+/* Stylowanie nawigacji */
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    padding: 0;
+    width: 100%;
+    padding:0;
+    margin:0;
+
+}
+
+nav ul li {
+    flex:1;
+    text-align: center;
+    margin:0;
+    padding:15px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+nav ul li a {
+    display: block;
+    width: 60px; /* Szerokość ikon */
+    height: 60px; /* Wysokość ikon */
+    margin: 0 auto;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: background-image 0.3s ease;
+}
+
+/* Dodanie tła dla ikon - czarne ikony */
+nav ul li a.home {
+    background-image: url('/static/Images/Header/home.png'); /* Czarna ikona dla Home */
+}
+
+nav ul li a.about {
+    background-image: url('/static/Images/Header/group.png'); /* Czarna ikona dla About Me */
+}
+
+nav ul li a.articles {
+    background-image: url('/static/Images/Header/layers.png'); /* Czarna ikona dla Articles */
+}
+
+nav ul li a.github {
+    background-image: url('/static/Images/Header/github.png'); /* Czarna ikona dla GitHub */
+}
+
+nav ul li a.linkedin {
+    background-image: url('/static/Images/Header/linkedin.png'); /* Czarna ikona dla LinkedIn */
+}
+
+/* Zmiana tła na szare ikony po najechaniu */
+nav ul li a.home:hover {
+    background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
+}
+
+nav ul li a.about:hover {
+    background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
+}
+
+nav ul li a.articles:hover {
+    background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
+}
+
+nav ul li a.github:hover {
+    background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
+}
+
+nav ul li a.linkedin:hover {
+    background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
+}
+
+
+
+/* Stylowanie głównej sekcji */
+main {
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Stylowanie sekcji artykułu */
+.article {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.article h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Font-Regular', sans-serif;
+}
+
+.article p {
+    margin-bottom: 20px;
+}
+
+.article .content {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.article .image {
+    flex: 1;
+}
+
+.article .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stylowanie stopki */
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.read-more {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.read-more a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-style: italic;
+}
+
+.read-more a:hover {
+    color: #555;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+    font-size:4em;
+}
+
+.profile-info p {
+    font-size: 1.5em;
+}
+
+.profile-picture {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-picture img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border:5px solid black;
+}
