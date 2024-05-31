@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLVehiclePriceAdvisor</title>
+    <link rel="stylesheet" href="/static/css/articles.css">
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="/articles.html">Articles</a></li>
+                    <li><a href="https://github.com/maggyy666">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/jakub-czyż-95584130a/">Linkedin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="article">
+                <div class="content">
+                    <h2>MLVehiclePriceAdvisor</h2>
+                    
+                    <p>MLVehiclePriceAdvisor is a Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
+                    
+                    <h3>Mathematical Prerequisites</h3>
+                    <p>To understand the concepts used in this project, it's beneficial to have knowledge of the following:</p>
+                    <ul>
+                        <li>Basics of statistics and probability theory</li>
+                        <li>Linear algebra (e.g., matrix operations)</li>
+                        <li>Machine learning concepts (e.g., regression, ensemble methods)</li>
+                    </ul>
+                    
+
+                        <h3>Random Forest Prediction</h3>
+                        <p>The random forest model predicts the optimal pricing <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>ŷ</mi></math> for vehicles based on their features <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>𝐱</mi></math>. The prediction is calculated as the average of predictions made by individual decision trees:</p>
+                        <div class="center">
+                        <p style="font-size:2.5em"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>ŷ</mi> = <mfrac><mn>1</mn><mi>T</mi></mfrac> <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></munderover> <mi>ŷ</mi><sub><mi>t</mi></sub>(<mi>𝐱</mi>)</math></p>
+                        </div>
+                        <p>Here, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><msub><mi>ŷ</mi><mi>t</mi></msub>(<mi>𝐱</mi>)</math> represents the prediction made by the <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>t</mi></math>-th decision tree in the random forest, and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>T</mi></math> is the total number of trees.</p>
+
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Web scraping of vehicle data from Otomoto.</li>
+                        <li>Data preprocessing and cleaning for ML analysis.</li>
+                        <li>Implementation of a random forest ML model for price prediction.</li>
+                        <li>Console application for user input of vehicle details and receiving optimal pricing recommendations.</li>
+                    </ul>
+                    
+                    <h3>Installation</h3>
+                    <ol>
+                        <li>Clone the repository: <code>git clone https://github.com/maggyy666/MLVehiclePriceAdvisor</code></li>
+                        <li>Install the required dependencies: <code>pip install -r requirements.txt</code></li>
+                        <li>Run the console application: <code>python main.py</code></li>
+                    </ol>
+                    
+                    <h3>Usage</h3>
+                    <p>Note: Before proceeding, make sure to download the ChromeDriver corresponding to your Chrome browser version and place it in your project directory.</p>
+                    <h4>Step 1: Web Scraping with OTOMOTOWebScraper.py</h4>
+                    <p>First, the user performs web scraping from OTOMOTO website, using the <code>OTOMOTOWebScraper.py</code> script.This script extracts vehicle data and saves each brand's data 
+                        into separate CSV files, such as <code>BMW.csv</code> or <code>Audi.csv</code>. The records are saved in the following format:</p>
+                    <code>[   data_id, car_id, brand_name, car_model, mileage, price_pln_formatted, price_eur_formatted, engine_power, gearbox, year, fuel, horse_power, current_page  ]</code>
+                    <p></p>
+                    <p>To run the scraper: <code>python OTOMOTOWebScraper.py</code></p>
+                    <h4>Step 2: Data Processing with data_processing.py</h4>
+                    <p>Next, process the extracted data using the <code>data_processing.py</code> script. This script merges all CSV files, from the specified input folder, applies data preprocessing and cleaning operations, and formats the data for machine learning analysis. The processed data is saved in the <code>output.csv</code> file.</p>
+                    
+                    <p>To execute the data processing: <code>python data_processing.py</code></p>
+                
+                    <h3>Step 3: Model Training and Evaluation</h3>
+    <p>
+        After processing the data, train the machine learning model to predict optimal pricing for vehicles based on their features. Use the <code>RandomForest_Training.py</code> script to train the Random Forest Machine Learning model and evaluate its performance using metrics such as squared error.
+    </p>
+    <p>
+        To train the model and evaluate performance:
+    </p>
+    <pre><code>python RandomForest_Training.py</code></pre>
+
+    <h3>Step 4: User Interface with main.py</h3>
+    <p>
+        Once the model is trained, use the console application implemented in the <code>main.py</code> script to input vehicle details and receive optimal pricing recommendations. Follow the prompts in the console to enter the brand name, car model, and other relevant information.
+    </p>
+    <p>
+        To run the console application:
+    </p>
+    <pre><code>python main.py</code></pre>
+
+    <h2>Usage</h2>
+
+    <h3>OTOMOTOWebScraper.py Overview</h3>
+    <p>
+        The <code>OTOMOTOWebScraper.py</code> script is a comprehensive tool designed to automate the extraction of vehicle data from the Otomoto website. It leverages the Selenium library to perform web scraping and collects detailed information on various car listings.
+    </p>
+    <p>
+        <strong>Key Features:</strong>
+    </p>
+    <ul>
+        <li><strong>Brand-Specific CSV Files:</strong> Organizes data into separate CSV files for each car brand, facilitating easy management and analysis.</li>
+    </ul>
+
+    <h3>data_processing.py Overview</h3>
+    <p>
+        The <code>data_processing.py</code> script efficiently processes and organizes vehicle listing data collected from the Otomoto website. It performs various data cleaning and preprocessing tasks to prepare the dataset for machine learning.
+    </p>
+    <p>
+        <strong>Key Feature:</strong>
+    </p>
+    <ul>
+        <li><strong>Separate CSV Files for Each Brand:</strong> Processes data from separate CSV files for individual car brands, simplifying data management and analysis.</li>
+    </ul>
+
+    <h3>RandomForest_Training.py Overview</h3>
+    <p>
+        The <code>RandomForest_Training.py</code> script trains a Random Forest machine learning model using the preprocessed vehicle data. It evaluates the model's performance and saves the trained model for future use.
+    </p>
+    <p>
+        <strong>Key Feature:</strong>
+    </p>
+    <ul>
+        <li><strong>R² Score of 0.77:</strong> Achieves a high R² score, indicating significant predictive accuracy.</li>
+    </ul>
+
+    <h3>Price Prediction Script Overview</h3>
+    <p>
+        The <code>price_predictor.py</code> script predicts the optimal price of a vehicle based on its brand, model, mileage, and production year using a pre-trained Random Forest model. It provides real-time pricing recommendations for users.
+    </p>
+    <p>
+        <strong>Key Features:</strong>
+    </p>
+    <ul>
+        <li><strong>User Input for Predictions:</strong> Allows users to input vehicle details for price predictions.</li>
+        <li><strong>Dynamic Adjustments:</strong> Dynamically adjusts prices based on mileage and production year for enhanced accuracy.</li>
+    </ul>
+
+    <h2>Example Usage</h2>
+    <pre><code>python price_predictor.py</code></pre>
+    <p>
+        Users will be prompted to enter vehicle details, and the script will display optimal pricing recommendations in both EUR and PLN.
+    </p>
+
+    <h2>License</h2>
+    <p>
+        This project is licensed under the MIT License. See the <a href="https://github.com/maggyy666/MLVehiclePriceAdvisor/blob/master/LICENSE">LICENSE</a> file for details.
+    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </div>
+</body>
+</html>
