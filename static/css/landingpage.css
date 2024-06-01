@@ -45,20 +45,51 @@ body::before {
 .container {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.7);
     width: 80%;
     max-width: 1200px;
-    margin: auto; 
+    margin: auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
     top: 50%;
-    transform: translateY(-50%); 
-    transition:height 0.5s ease-in-out;
+    transform: translateY(-50%);
+    transition: height 0.5s ease-in-out;
+    /* Dodaj animację */
+    animation: slide-in 1.5s ease-out forwards;
+}
+.content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    transition: left 0.5s ease;
 }
 
+.content.active {
+    display: block;
+    left: 0;
+}
+
+.content.slide-left {
+    left: -100%;
+}
+
+.content.slide-right {
+    left: 100%;
+}
+/* Definicja animacji */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%) translateY(-50%);
+    }
+    to {
+        transform: translateX(0) translateY(-50%);
+    }
+}
 
 /* Stylowanie nawigacji */
 nav {
@@ -102,6 +133,37 @@ nav ul li a {
 }
 
 /* Dodanie tła dla ikon - czarne ikony */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul li a {
+    display: block;
+    width: 60px; /* Szerokość ikon */
+    height: 60px; /* Wysokość ikon */
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: background-image 0.3s ease, transform 0.3s ease; /* Dodanie transformacji */
+}
+
+/* Dodanie tła dla ikon - czarne ikony */
 nav ul li a.home {
     background-image: url('/static/Images/Header/home.png'); /* Czarna ikona dla Home */
 }
@@ -125,22 +187,27 @@ nav ul li a.linkedin {
 /* Zmiana tła na szare ikony po najechaniu */
 nav ul li a.home:hover {
     background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.about:hover {
     background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.articles:hover {
     background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.github:hover {
     background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.linkedin:hover {
     background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 
