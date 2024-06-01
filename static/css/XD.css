@@ -61,6 +61,7 @@ body::before {
 
 }
 
+
 header {
     background: none; 
     padding: 0; 
@@ -102,6 +103,11 @@ nav ul li {
     margin:0;
     padding:15px;
     border-bottom: 1px solid #ccc;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
 }
 
 nav ul li a {
@@ -180,6 +186,12 @@ a {
     margin-bottom: 10px;
     font-family: 'Aileron-Regular', sans-serif;
 
+}
+h2 a{
+    transition: color 0.3s ease;
+}
+h2 a:hover{
+    color:#9999
 }
 .article h3{
     font-size:3em;
