@@ -101,7 +101,7 @@ nav ul li {
     text-align: center;
     margin:0;
     padding:15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #312e2e;
 
 }
 
@@ -133,7 +133,7 @@ nav ul li {
     text-align: center;
     margin: 0;
     padding: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #312e2e;
 }
 
 nav ul li a {
@@ -222,7 +222,7 @@ h2 a{
     transition: color 0.3s ease;
 }
 h2 a:hover{
-    color:#9999
+    color:grey;
 }
 .article h3{
     font-size:3em;
@@ -249,6 +249,7 @@ h2 a:hover{
 .article .image img {
     max-width: 100%;
     height: auto;
+    min-height: 250px;
 }
 
 footer {
