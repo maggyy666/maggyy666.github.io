@@ -72,18 +72,16 @@ header {
     font-family:'Font-Medium',sans-serif;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 100%; 
+a{
+    text-decoration: none;
+    color:inherit;
 }
-
 
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
+
 }
 
 nav ul {
@@ -95,6 +93,7 @@ nav ul {
     width: 100%;
     padding:0;
     margin:0;
+
 }
 
 nav ul li {
@@ -103,11 +102,7 @@ nav ul li {
     margin:0;
     padding:15px;
     border-bottom: 1px solid #ccc;
-}
 
-a{
-    text-decoration: none;
-    color:inherit;
 }
 
 nav ul li a {
@@ -119,7 +114,38 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
+    transition: background-image 0.3s ease;
+}
 
+/* Dodanie tła dla ikon - czarne ikony */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul li a {
+    display: block;
+    width: 60px; /* Szerokość ikon */
+    height: 60px; /* Wysokość ikon */
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: background-image 0.3s ease, transform 0.3s ease; /* Dodanie transformacji */
 }
 
 /* Dodanie tła dla ikon - czarne ikony */
@@ -146,22 +172,27 @@ nav ul li a.linkedin {
 /* Zmiana tła na szare ikony po najechaniu */
 nav ul li a.home:hover {
     background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.about:hover {
     background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.articles:hover {
     background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.github:hover {
     background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 nav ul li a.linkedin:hover {
     background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 main {
