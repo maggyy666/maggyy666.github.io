@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 2.0;
+    line-height: 1.6;
 }
 
 @font-face {
@@ -29,7 +29,6 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Aileron-UltraLight', sans-serif;
-    line-height: 1.6;
     overflow-y: auto;
 }
 
@@ -47,7 +46,7 @@ body::before {
 .container {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     width: 80%;
     max-width: 1200px;
     margin: 20px auto;
@@ -55,7 +54,6 @@ body::before {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    margin-bottom: 50px;
 }
 
 header {
@@ -63,62 +61,17 @@ header {
     padding: 0;
 }
 
-.tech-name {
-    font-size: 1.8em;
-    font-family: 'Font-Medium', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
-
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Wyśrodkowanie ikon w pionie */
-    padding: 0;
-    width: 100%;
-    padding:0;
-    margin:0;
-
-}
-
-nav ul li {
-    flex:1;
-    text-align: center;
-    margin:0;
-    padding:15px;
-    border-bottom: 1px solid #ccc;
-
-}
-
-nav ul li a {
-    display: block;
-    width: 60px; /* Szerokość ikon */
-    height: 60px; /* Wysokość ikon */
-    margin: 0 auto;
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    transition: background-image 0.3s ease;
-}
-
-/* Dodanie tła dla ikon - czarne ikony */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     width: 100%;
     margin: 0;
@@ -127,187 +80,69 @@ nav ul {
 nav ul li {
     flex: 1;
     text-align: center;
-    margin: 0;
     padding: 15px;
     border-bottom: 1px solid #ccc;
 }
 
 nav ul li a {
     display: block;
-    width: 60px; /* Szerokość ikon */
-    height: 60px; /* Wysokość ikon */
+    width: 60px;
+    height: 60px;
     margin: 0 auto;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    transition: background-image 0.3s ease, transform 0.3s ease; /* Dodanie transformacji */
+    transition: background-image 0.3s ease, transform 0.3s ease;
 }
 
-/* Dodanie tła dla ikon - czarne ikony */
 nav ul li a.home {
-    background-image: url('/static/Images/Header/home.png'); /* Czarna ikona dla Home */
+    background-image: url('/static/Images/Header/home.png');
 }
 
 nav ul li a.about {
-    background-image: url('/static/Images/Header/group.png'); /* Czarna ikona dla About Me */
+    background-image: url('/static/Images/Header/group.png');
 }
 
 nav ul li a.articles {
-    background-image: url('/static/Images/Header/layers.png'); /* Czarna ikona dla Articles */
+    background-image: url('/static/Images/Header/layers.png');
 }
 
 nav ul li a.github {
-    background-image: url('/static/Images/Header/github.png'); /* Czarna ikona dla GitHub */
+    background-image: url('/static/Images/Header/github.png');
 }
 
 nav ul li a.linkedin {
-    background-image: url('/static/Images/Header/linkedin.png'); /* Czarna ikona dla LinkedIn */
+    background-image: url('/static/Images/Header/linkedin.png');
 }
 
-/* Zmiana tła na szare ikony po najechaniu */
-nav ul li a.home:hover {
-    background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
-    transform: translateY(-5px); /* Podnoszenie ikony */
-}
-
-nav ul li a.about:hover {
-    background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
-    transform: translateY(-5px); /* Podnoszenie ikony */
-}
-
-nav ul li a.articles:hover {
-    background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
-    transform: translateY(-5px); /* Podnoszenie ikony */
-}
-
-nav ul li a.github:hover {
-    background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
-    transform: translateY(-5px); /* Podnoszenie ikony */
-}
-
-nav ul li a.linkedin:hover {
-    background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+nav ul li a:hover {
+    transform: translateY(-5px);
 }
 
 main {
     padding: 20px 0;
 }
 
-a {
-    text-decoration: none;
-}
-
-.article {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-
-.article h2 {
-    font-size: 3em;
+.profile-info h2 {
+    font-size: 2.5em;
     margin-bottom: 10px;
-    font-family: 'Aileron-Regular', sans-serif;
-}
-
-h2 a {
-    transition: color 0.3s ease;
-}
-
-h2 a:hover {
-    color: grey;
-}
-
-.article h3 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    font-family: 'Aileron-Regular', sans-serif;
-}
-
-.article p {
-    margin-bottom: 20px;
-}
-
-.article .content {
-    flex: 2;
-    padding-right: 20px;
-}
-
-.article .image {
-    flex: 1;
-}
-
-.article .image img {
-    max-width: 100%;
-    height: auto;
-    min-height: 250px;
-}
-
-footer {
-    color: #555;
     text-align: center;
-    padding: 10px 0;
-    border-radius: 20px;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+    text-align: justify;
     font-size: 1.2em;
-}
-
-.read-more {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.read-more a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-style: italic;
-}
-
-.read-more a:hover {
-    color: #555;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.content {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.list {
-    margin-left: 60px;
-    margin-bottom: 20px;
-}
-
-.code {
-    margin-left: 80px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-left: 4px solid #ccc;
-}
-
-.section {
-    margin-bottom: 40px;
 }
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     justify-items: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .tech-item {
@@ -320,7 +155,10 @@ footer {
     margin-bottom: 10px;
 }
 
-.profile-info {
-    font-size: 1.3em;
+footer {
+    color: #555;
     text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1.2em;
 }
