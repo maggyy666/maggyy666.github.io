@@ -11,9 +11,9 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="home" onclick="showContent('home')">Home</a></li>
+                    <li><a href="/index.html" class="home">Home</a></li>
                     <li><a href="/about.html" class="about">About Me</a></li>
-                    <li><a href="articles.html" class="articles" onclick="showContent('articles')">Articles</a></li>
+                    <li><a href="/articles.html" class="articles">Articles</a></li>
                     <li><a href="https://github.com/maggyy666" class="github">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/jakub-czyż-95584130a/" class="linkedin">LinkedIn</a></li>
                 </ul>
@@ -26,7 +26,7 @@
                 <h2>Intro</h2>
                 <p>The GoodFoodMVC project is a community-driven recipe sharing platform built on the ASP.NET MVC framework. This platform allows users to submit, share, and discover new recipes, fostering a vibrant culinary community.</p>
                 <ul>
-                    <li>Users can submit their recipes, which are stored securely in a SQL Express database.</li>
+                    <li>Users can submit their recipes, which are stored securely in a MongoDB database.</li>
                     <li>The platform dynamically presents recipes in an engaging format, enhancing user experience and readability.</li>
                     <li>Users can search for recipes by ingredients or recipe names, making it easy to find specific dishes.</li>
                     <li>User profiles allow for personalization and interaction within the community.</li>
@@ -38,13 +38,15 @@
             <section class="features">
                 <h2>Features</h2>
                 <ul>
-                    <li>User Recipe Submission: Any logged-in user can contribute their culinary creations by submitting recipes through the application.</li>
-                    <li>Database Storage: Utilizing SQL Express as the backend database to securely store the submitted recipes and associated metadata.</li>
-                    <li>Dynamic Content: The application dynamically presents the content of the database in the form of engaging articles, enhancing accessibility and readability for users.</li>
-                    <li>Search Functionality: Users can search for specific recipes or ingredients within the database, making it easier to discover new dishes.</li>
-                    <li>User Profiles: Each user has a personalized profile where they can manage their submitted recipes and engage with other community members.</li>
-                    <li>Rating and Commenting: Users can rate and comment on recipes, fostering interaction and feedback within the community.</li>
-                    <li>Responsive Design: The platform is designed to provide a seamless user experience across various devices and screen sizes, ensuring accessibility for all users.</li>
+                    <li>Recipe submission and storage in MongoDB.</li>
+                    <li>Dynamic content presentation.</li>
+                    <li>Search functionality by ingredients or recipe names.</li>
+                    <li>User profiles for personalization and interaction.</li>
+                    <li>Rating and commenting on recipes.</li>
+                    <li>Responsive design for all devices.</li>
+                    <li>Recipe list with titles, descriptions, and images.</li>
+                    <li>Recipe submission form with image upload.</li>
+                    <li>User authentication and registration.</li>
                 </ul>
             </section>
 
@@ -63,18 +65,45 @@
 
             <section class="setup">
                 <h2>Setup</h2>
-                <p>Following python libraries required:</p>
+                <p>Required NuGet packages:</p>
                 <ul>
-                    <li>pip install numpy</li>
-                    <li>pip install pandas</li>
+                    <li>MongoDB.Driver</li>
+                    <li>Microsoft.AspNet.Mvc</li>
+                    <li>Microsoft.Owin.Host.SystemWeb</li>
+                    <li>Microsoft.Owin.Security.Cookies</li>
+                    <li>Microsoft.Owin.Security.Google</li>
+                    <li>Microsoft.Owin</li>
+                    <li>Microsoft.Owin.Security</li>
                 </ul>
             </section>
 
             <hr>
 
+            <section class="getting-started">
+                <h2>Getting Started</h2>
+                <ol>
+                    <li>Clone the repository: <code>git clone https://github.com/maggyy666/GoodFoodMVC</code></li>
+                    <li>Open <code>GoodFoodMVC.sln</code> in Visual Studio.</li>
+                    <li>Build and run the project.</li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section class="technologies-used">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>C#</li>
+                    <li>ASP.NET MVC</li>
+                    <li>MongoDB</li>
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </section>
+
             <section class="source-code">
                 <h2>Source Code</h2>
-                <p>You can view the source code: <a href="https://github.com/maggyy666/GoodFoodMVC">HERE</a></p>
+                <p>View the source code: <a href="https://github.com/maggyy666/GoodFoodMVC">HERE</a></p>
                 <p><a href="/index.html">Back to Portfolio</a></p>
             </section>
         </main>
@@ -86,3 +115,4 @@
     <script src="/static/js/scripts.js"></script>
 </body>
 </html>
+```
