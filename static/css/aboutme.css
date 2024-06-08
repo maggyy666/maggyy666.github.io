@@ -61,17 +61,53 @@ header {
     padding: 0;
 }
 
+/* Stylowanie nawigacji */
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
+
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    padding: 0;
+    width: 100%;
+    padding:0;
+    margin:0;
+
+}
+
+nav ul li {
+    flex:1;
+    text-align: center;
+    margin:0;
+    padding:15px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+nav ul li a {
+    display: block;
+    width: 60px; /* Szerokość ikon */
+    height: 60px; /* Wysokość ikon */
+    margin: 0 auto;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: background-image 0.3s ease;
+}
+
+/* Dodanie tła dla ikon - czarne ikony */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Wyśrodkowanie ikon w pionie */
     padding: 0;
     width: 100%;
     margin: 0;
@@ -80,44 +116,68 @@ nav ul {
 nav ul li {
     flex: 1;
     text-align: center;
+    margin: 0;
     padding: 15px;
     border-bottom: 1px solid #ccc;
 }
 
 nav ul li a {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 60px; /* Szerokość ikon */
+    height: 60px; /* Wysokość ikon */
     margin: 0 auto;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    transition: background-image 0.3s ease, transform 0.3s ease;
+    transition: background-image 0.3s ease, transform 0.3s ease; /* Dodanie transformacji */
 }
 
+/* Dodanie tła dla ikon - czarne ikony */
 nav ul li a.home {
-    background-image: url('/static/Images/Header/home.png');
+    background-image: url('/static/Images/Header/home.png'); /* Czarna ikona dla Home */
 }
 
 nav ul li a.about {
-    background-image: url('/static/Images/Header/group.png');
+    background-image: url('/static/Images/Header/group.png'); /* Czarna ikona dla About Me */
 }
 
 nav ul li a.articles {
-    background-image: url('/static/Images/Header/layers.png');
+    background-image: url('/static/Images/Header/layers.png'); /* Czarna ikona dla Articles */
 }
 
 nav ul li a.github {
-    background-image: url('/static/Images/Header/github.png');
+    background-image: url('/static/Images/Header/github.png'); /* Czarna ikona dla GitHub */
 }
 
 nav ul li a.linkedin {
-    background-image: url('/static/Images/Header/linkedin.png');
+    background-image: url('/static/Images/Header/linkedin.png'); /* Czarna ikona dla LinkedIn */
 }
 
-nav ul li a:hover {
-    transform: translateY(-5px);
+/* Zmiana tła na szare ikony po najechaniu */
+nav ul li a.home:hover {
+    background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
+    transform: translateY(-5px); /* Podnoszenie ikony */
+}
+
+nav ul li a.about:hover {
+    background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
+    transform: translateY(-5px); /* Podnoszenie ikony */
+}
+
+nav ul li a.articles:hover {
+    background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
+    transform: translateY(-5px); /* Podnoszenie ikony */
+}
+
+nav ul li a.github:hover {
+    background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
+    transform: translateY(-5px); /* Podnoszenie ikony */
+}
+
+nav ul li a.linkedin:hover {
+    background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
+    transform: translateY(-5px); /* Podnoszenie ikony */
 }
 
 main {
