@@ -11,15 +11,18 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="/index.html" class="home" onclick="showContent('home')">Home</a></li>
-                    <li><a href="/about.html" class="about" onclick="showContent('about')">About Me</a></li>
-                    <li><a href="articles.html" class="articles" onclick="showContent('articles')">Articles</a></li>
+                    <li><a href="/index.html" class="home">Home</a></li>
+                    <li><a href="/about.html" class="about">About Me</a></li>
+                    <li><a href="/articles.html" class="articles">Articles</a></li>
                     <li><a href="https://github.com/maggyy666" class="github">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/jakub-czyż-95584130a/" class="linkedin">LinkedIn</a></li>
                 </ul>
             </nav>
         </header>
+        
         <main>
+            <h1 class="main-title">MLVehiclePriceAdvisor</h1>
+
             <section class="intro">
                 <h2>Intro</h2>
                 <p>MLVehiclePriceAdvisor is a Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
@@ -35,12 +38,16 @@
 
             <section class="features">
                 <h2>Features</h2>
-                <ul>
-                    <li>Web scraping of vehicle data from Otomoto.</li>
-                    <li>Data preprocessing and cleaning for ML analysis.</li>
-                    <li>Implementation of a random forest ML model for price prediction.</li>
-                    <li>Console application for user input of vehicle details and receiving optimal pricing recommendations.</li>
-                </ul>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <ul>
+                            <li><span class="plus-icon"></span> Web scraping from Otomoto.</li>
+                            <li><span class="plus-icon"></span> Data preprocessing and cleaning.</li>
+                            <li><span class="plus-icon"></span> Random forest model implementation.</li>
+                            <li><span class="plus-icon"></span> Console application for pricing recommendations.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <hr>
@@ -61,6 +68,7 @@
                 <img src="/static/Images/MLVehiclePriceAdvisor/Skipping2.png" alt="Skipping Already Processed Brands">
                 <p>Skipping brands with existing CSV files to avoid duplicates.</p>
             </section>
+
             <hr>
 
             <section class="processing">
