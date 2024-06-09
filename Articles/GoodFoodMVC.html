@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoodFoodMVC</title>
     <link rel="stylesheet" href="/static/css/articles.css">
+    <link rel="stylesheet" href="/static/css/demo-styles.css"> <!-- Nowy plik stylów -->
 </head>
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
         </header>
 
         <main>
-            <h1 style="font-size:3em">GOODFOOD MVC</h1>
+            <h1 class="main-title">GoodFoodMVC</h1>
             <section class="intro">
                 <h2>Intro</h2>
                 <p>The GoodFoodMVC project is a community-driven recipe sharing platform built on the ASP.NET MVC framework. This platform allows users to submit, share, and discover new recipes, fostering a vibrant culinary community.</p>
@@ -37,30 +38,99 @@
 
             <section class="features">
                 <h2>Features</h2>
-                <ul>
-                    <li>Recipe submission and storage in MongoDB.</li>
-                    <li>Dynamic content presentation.</li>
-                    <li>Search functionality by ingredients or recipe names.</li>
-                    <li>User profiles for personalization and interaction.</li>
-                    <li>Rating and commenting on recipes.</li>
-                    <li>Responsive design for all devices.</li>
-                    <li>Recipe list with titles, descriptions, and images.</li>
-                    <li>Recipe submission form with image upload.</li>
-                    <li>User authentication and registration.</li>
-                </ul>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <ul>
+                            <li><span class="plus-icon"></span>Recipe submission</li>
+                            <li><span class="plus-icon"></span>MongoDB storage</li>
+                            <li><span class="plus-icon"></span>Dynamic content</li>
+                            <li><span class="plus-icon"></span>Ingredient search</li>
+                            <li><span class="plus-icon"></span>Recipe ratings</li>
+                            <li><span class="plus-icon"></span>Registration</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <ul>
+                            <li><span class="plus-icon"></span>Responsive design</li>
+                            <li><span class="plus-icon"></span>Recipe list with images</li>
+                            <li><span class="plus-icon"></span>Image upload</li>
+                            <li><span class="plus-icon"></span>User authentication</li>
+                            <li><span class="plus-icon"></span>Recipe comments</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
+            <hr>
 
+            <section class="technologies-used">
+                <h2>Technologies Used</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <ul>
+                            <li><img src="/static/Images/SVG/c-sharp.svg" alt="C#" class="tech-icon">C#</li>
+                            <li><img src="/static/Images/SVG/dotnet.svg" alt="ASP.NET MVC" class="tech-icon">ASP.NET MVC</li>
+                            <li><img src="/static/Images/SVG/mongodb-icon.svg" alt="MongoDB" class="tech-icon">MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <ul>
+                            <li><img src="/static/Images/SVG/html-5.svg" alt="HTML" class="tech-icon">HTML/CSS/JavaScript</li>
+                            <li><img src="/static/Images/SVG/bootstrap.svg" alt="Bootstrap" class="tech-icon">Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <hr>
 
             <section class="demo">
                 <h2>Demo</h2>
-                <p>Data input schema:</p>
-                <img src="/static/Images/GoodFoodMVC1.png" alt="Profile Picture">
-                <p>Outcome:</p>
-                <img src="/static/Images/demo1.png" alt="Demo Image 1">
-                <img src="/static/Images/demo2.png" alt="Demo Image 2">
+            
+                <!-- Security Check -->
+                <h3>Security Check</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/GoodFoodMVC/CheckSecurity.gif" alt="Security Check">
+                </div>
+                <p>This demonstrates that users must log in to edit or delete recipes. When attempting to perform these actions without logging in, the user is redirected to the login page, ensuring that only authorized users can make changes.</p>
+            
+                <hr>
+            
+                <!-- Adding a New Recipe -->
+                <h3>Adding a New Recipe</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/GoodFoodMVC/AddRecipe.gif" alt="Adding a Recipe">
+                </div>
+                <p>This illustrates the process of adding a new recipe after logging in. It shows the user logging into the application, navigating to the add recipe page, entering the recipe details, and successfully submitting the form. The session mechanism is used to maintain the logged-in state throughout the process.</p>
+            
+                <hr>
+            
+                <!-- User Registration -->
+                <h3>User Registration</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/GoodFoodMVC/Register.gif" alt="User Registration">
+                </div>
+                <p>This demonstrates the process of registering a new user through the registration form. The user enters their details such as username, password, and email. Upon successful registration, the new user is added to the "Users" collection in the MongoDB database.</p>
+            
+                <hr>
+            
+                <!-- Editing a Recipe -->
+                <h3>Editing a Recipe</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/GoodFoodMVC/Edit.gif" alt="Editing a Recipe">
+                </div>
+                <p>This shows the process of editing a recipe. The user logs in, selects a recipe to edit, changes the recipe's name from "Carbonara" to "x", and saves the changes. Editing recipes is only possible after logging in.</p>
+            
+                <hr>
+            
+                <!-- Removing a Recipe -->
+                <h3>Removing a Recipe</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/GoodFoodMVC/Remove.gif" alt="Removing a Recipe">
+                </div>
+                <p>This demonstrates the process of removing a recipe. The user logs in, selects a recipe to remove, and confirms the deletion. The recipe is then successfully deleted from the database. Removing recipes is only allowed after logging in.</p>
+            
             </section>
-
+            
+            
             <hr>
 
             <section class="setup">
@@ -76,30 +146,8 @@
                     <li>Microsoft.Owin.Security</li>
                 </ul>
             </section>
-
+           
             <hr>
-
-            <section class="getting-started">
-                <h2>Getting Started</h2>
-                <ol>
-                    <li>Clone the repository: <code>git clone https://github.com/maggyy666/GoodFoodMVC</code></li>
-                    <li>Open <code>GoodFoodMVC.sln</code> in Visual Studio.</li>
-                    <li>Build and run the project.</li>
-                </ol>
-            </section>
-
-            <hr>
-
-            <section class="technologies-used">
-                <h2>Technologies Used</h2>
-                <ul>
-                    <li>C#</li>
-                    <li>ASP.NET MVC</li>
-                    <li>MongoDB</li>
-                    <li>HTML/CSS/JavaScript</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </section>
 
             <section class="source-code">
                 <h2>Source Code</h2>
@@ -115,4 +163,3 @@
     <script src="/static/js/scripts.js"></script>
 </body>
 </html>
-```
