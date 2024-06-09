@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="static/css/XD.css">
-    <script src="scripts.js"></script>
-
+    <script src="scripts.js" defer></script> <!-- Upewnij się, że skrypt jest ładowany asynchronicznie -->
 </head>
 <body>
     <div class="container">
@@ -20,69 +19,69 @@
                     <li><a href="https://www.linkedin.com/in/jakub-czyż-95584130a/" class="linkedin">LinkedIn</a></li>
                 </ul>
             </nav>
+            <div class="tags">
+                <a href="#" class="tag">ASP .NET Core</a>
+                <a href="#" class="tag">Machine Learning</a>
+                <a href="#" class="tag">Python</a>
+                <a href="#" class="tag">WPF</a>
+            </div>
         </header>
 
         <main>
-            <section class="article">
-                <div class="content">
-                    <h2><a href="/Articles/GoodFoodMVC.html">GoodFoodMVC</a></h2>
-                    <div class="tech-stack">
-                        <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
-                        <span class="tech-name">MVC Fullstack application</span>,
-                        <span class="tech-name" style="color:#512BD4;">JQuery, HTML5, Bootstrap, MongoDB</span>
-                    </div>
-                    <p>The GoodFood Project is a community-driven recipe sharing platform built on the ASP.NET MVC (Model-View-Controller) framework. Unlike traditional websites, MVC separates the application logic into three interconnected components: the Model (data and business logic), the View (user interface), and the Controller (handles user input and interacts with the model and view).</p>
-                    <div class="read-more">
-                        <a href="Articles/GoodFoodMVC.html">Read more</a>
-                    </div>
-                </div>
-                
-                <div class="image">
-                    <img src="static/Images/GoodFoodMVC/GoodFoodMVCGif (2).gif" alt="Opis obrazka">
-                </div>
-                
-            </section>
-            <section class="article">
-                <div class="content">
-                    <h2><a href="/Articles/MLVehiclePriceAdvisor.html">MLVehiclePricePredictor</a></h2>
-                    <div class="tech-stack">
-                        <img src="static/Images/SVG/python.svg" alt="Python" class="tech-logo">
-                        <span class="tech-name">Machine Learning application</span>,
-                        <span class="tech-name" style="color:#FFC331">Selenium, Pandas, Scikit-learn, Joblib</span>
-                    </div>
-                    <p>Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
-                    <div class="read-more">
-                        <a href="Articles/MLVehiclePriceAdvisor.html">Read more</a>
-                    </div>
-                </div>
-                
-                <div class="image">
-                    <a href="/Articles/MLVehiclePriceAdvisor.html">
-                        <img src="static//Images//random-forest.png" alt="Random Forest">
-                    </a>
-                </div>
-            </section>
-            <section class="article">
-                <div class="content">
-                    <h2><a href="/Articles/PKP-ICAA-WPF.html">PKP-ICAA-WPF</a></h2>
-                    <div class="tech-stack">
-                        <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
-                        <span class="tech-name">WPF Desktop Application</span>,
-                        <span class="tech-name" style="color:#512BD4">XAML,JSON,C#</span>
-                    </div>
-                    <p>
-                        WPF Application designed to facilitate railway ticket booking for users. This intuitive and user-friendly application allows passengers to search for available train routes, view ticket prices, and book tickets seamlessly. 
-                    </p>                   
-                     <div class="read-more">
-                        <a href="Articles/PKP-ICAA-WPF.html">Read more</a>
-                    </div>
-                </div>
-                
-                <div class="image">
-                    <img src="{{ url_for('static', filename='Images/random-forest.webp') }}" alt="Random Forest">
-                </div>
-            </section>
-            <!-- Można dodać więcej artykułów w ten sam sposób -->
+            <div class="articles-container">
+                <a href="/Articles/GoodFoodMVC.html" class="article-link">
+                    <section class="article-tile" data-tags="ASP .NET Core, MVC">
+                        <div class="article-content">
+                            <h2>GoodFoodMVC</h2>
+                            <div class="tech-stack">
+                                <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
+                                <span class="tech-name">MVC Fullstack application</span>,
+                                <span class="tech-name" style="color:#512BD4;">JQuery, HTML5, Bootstrap, MongoDB</span>
+                            </div>
+                            <div class="article-description">
+                                <p>GoodFoodMVC is a project based on the ASP .NET MVC framework. The project consists of mechanisms for adding, editing and deleting recipes. Mechanism-based login restricts non-logged-in users from accessing certain features.When it comes to the database storing recipe and user data, MongoDb was used in this project.</p>
+                            </div>
+                        </div>
+                        <div class="article-image">
+                            <img src="static/Images/GoodFoodMVC/Welcome.gif" alt="GoodFoodMVC">
+                        </div>
+                    </section>
+                </a>
+
+                <a href="/Articles/MLVehiclePriceAdvisor.html" class="article-link">
+                    <section class="article-tile" data-tags="Machine Learning, Python">
+                        <div class="article-content">
+                            <h2>MLVehiclePricePredictor</h2>
+                            <div class="tech-stack">
+                                <img src="static/Images/SVG/python.svg" alt="Python" class="tech-logo">
+                                <span class="tech-name">Machine Learning application</span>,
+                                <span class="tech-name" style="color:#FFC331">Selenium, Pandas, Scikit-learn, Joblib</span>
+                            </div>
+                            <p>Python-based web scraper designed to extract vehicle data from the popular vehicle marketplace OTOMOTO. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
+                        </div>
+                        <div class="article-image">
+                            <img src="static/Images/random-forest.png" alt="Random Forest">
+                        </div>
+                    </section>
+                </a>
+
+                <a href="/Articles/PKP-ICAA-WPF.html" class="article-link">
+                    <section class="article-tile" data-tags="WPF,ASP .NET">
+                        <div class="article-content">
+                            <h2>PKP-ICAA-WPF</h2>
+                            <div class="tech-stack">
+                                <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
+                                <span class="tech-name">WPF Desktop Application</span>,
+                                <span class="tech-name" style="color:#512BD4">XAML, JSON, C#</span>
+                            </div>
+                            <p>WPF Application designed to facilitate railway ticket booking for users. This intuitive and user-friendly application allows passengers to search for available train routes, view ticket prices, and book tickets seamlessly.</p>
+                        </div>
+                        <div class="article-image">
+                            <img src="static/Images/random-forest.webp" alt="WPF App">
+                        </div>
+                    </section>
+                </a>
+            </div>
         </main>
 
         <footer>
