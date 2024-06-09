@@ -64,56 +64,21 @@ header {
     padding: 0;
 }
 
-a{
+a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
-
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Wyśrodkowanie ikon w pionie */
-    padding: 0;
-    width: 100%;
-    padding:0;
-    margin:0;
-
-}
-
-nav ul li {
-    flex:1;
-    text-align: center;
-    margin:0;
-    padding:15px;
-    border-bottom: 1px solid #ccc;
-
-}
-
-nav ul li a {
-    display: block;
-    width: 60px; /* Szerokość ikon */
-    height: 60px; /* Wysokość ikon */
-    margin: 0 auto;
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    transition: background-image 0.3s ease;
-}
-
-/* Dodanie tła dla ikon - czarne ikony */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center; /* Wyśrodkowanie ikon w pionie */
     padding: 0;
     width: 100%;
@@ -216,9 +181,18 @@ hr {
 .features ul, .setup ul {
     list-style: none;
 }
-
+.plus-icon {
+    background-image: url('/static/Images/SVG/add-create-new-plus-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 .features ul li::before, .setup ul li::before {
-    content: "✔";
+    content: "";
     color: #4CAF50;
     font-weight: bold;
     display: inline-block;
@@ -230,7 +204,20 @@ hr {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
+.demo-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Dodaje odstęp między obrazami a opisem */
+}
+
+.demo-img-container img {
+    max-width: 100%; /* Dopasowuje szerokość obrazu do kontenera */
+    height: auto; /* Utrzymuje proporcje obrazu */
+}
+
 
 .source-code a {
     color: #007BFF;
@@ -246,4 +233,100 @@ footer {
     padding: 10px 0;
     font-size: 1em;
     color: #555;
+    border-top: 1px solid #ccc;
+
 }
+
+
+.intro, .features, .scraping, .processing, .training, .source-code, .demo, .setup {
+    font-size: 18px; 
+    line-height: 1.8;
+}
+
+.intro h2, .features h2, .scraping h2, .processing h2, .training h2, .source-code h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.intro h3, .features h3, .scraping h3, .processing h3, .training h3, .source-code h3 {
+    font-size: 24px; 
+    margin-bottom: 15px; 
+}
+
+.intro p, .features p, .scraping p, .processing p, .training p, .source-code p {
+    font-size: 18px; 
+    margin-bottom: 15px; 
+}
+
+.intro ul, .features ul, .scraping ul, .processing ul, .training ul, .source-code ul,
+.intro ol, .features ol, .scraping ol, .processing ol, .training ol, .source-code ol {
+    font-size: 18px; 
+    margin-bottom: 20px;
+}
+
+.intro ul li, .features ul li, .scraping ul li, .processing ul li, .training ul li, .source-code ul li,
+.intro ol li, .features ol li, .scraping ol li, .processing ol li, .training ol li, .source-code ol li {
+    margin-bottom: 10px;
+}
+
+.intro img, .features img, .scraping img, .processing img, .training img, .source-code img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+/* Nowe style dla podziału sekcji na kolumny */
+
+/* Kontener dla sekcji features w dwóch kolumnach */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.features-container .feature-item {
+    flex: 0 1 calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.features-container .feature-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    list-style: none;
+}
+
+/* Styl dla elementów w sekcji features */
+.features-container .feature-item li {
+    margin-bottom: 10px;
+}
+
+/* Styl dla głównego tytułu */
+h1.main-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 40px;
+    font-family: 'Font-Regular', sans-serif;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.technologies-used ul {
+    list-style: none;
+    padding: 0;
+}
+
+.technologies-used li {
+    font-size: 22px; /* Zwiększony rozmiar czcionki */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.technologies-used .tech-icon {
+    width: 24px; /* Szerokość ikony */
+    height: 24px; /* Wysokość ikony */
+    margin-right: 10px; /* Odstęp między ikoną a tekstem */
+    fill: #333; /* Kolor ikony */
+}
+
