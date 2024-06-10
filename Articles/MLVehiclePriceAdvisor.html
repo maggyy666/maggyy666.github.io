@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLVehiclePriceAdvisor</title>
+    <title>GoodFoodMVC</title>
     <link rel="stylesheet" href="/static/css/articles.css">
+    <link rel="stylesheet" href="/static/css/demo-styles.css"> <!-- Nowy plik stylów -->
 </head>
 <body>
     <div class="container">
@@ -19,18 +20,17 @@
                 </ul>
             </nav>
         </header>
-        
-        <main>
-            <h1 class="main-title">MLVehiclePriceAdvisor</h1>
 
+        <main>
+            <h1 class="main-title">GoodFoodMVC</h1>
             <section class="intro">
                 <h2>Intro</h2>
-                <p>MLVehiclePriceAdvisor is a Python-based web scraper designed to extract vehicle data from the popular automotive marketplace Otomoto. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
+                <p>The GoodFoodMVC project is a community-driven recipe sharing platform built on the ASP.NET MVC framework. This platform allows users to submit, share, and discover new recipes, fostering a vibrant culinary community.</p>
                 <ul>
-                    <li>Web scraping of vehicle data from Otomoto.</li>
-                    <li>Data preprocessing and cleaning for ML analysis.</li>
-                    <li>Implementation of a random forest ML model for price prediction.</li>
-                    <li>Console application for user input of vehicle details and receiving optimal pricing recommendations.</li>
+                    <li>Users can submit their recipes, which are stored securely in a MongoDB database.</li>
+                    <li>The platform dynamically presents recipes in an engaging format, enhancing user experience and readability.</li>
+                    <li>Users can search for recipes by ingredients or recipe names, making it easy to find specific dishes.</li>
+                    <li>User profiles allow for personalization and interaction within the community.</li>
                 </ul>
             </section>
 
@@ -41,57 +41,89 @@
                 <div class="features-container">
                     <div class="feature-item">
                         <ul>
-                            <li><span class="plus-icon"></span> Web scraping from Otomoto.</li>
-                            <li><span class="plus-icon"></span> Data preprocessing and cleaning.</li>
-                            <li><span class="plus-icon"></span> Random forest model implementation.</li>
-                            <li><span class="plus-icon"></span> Console application for pricing recommendations.</li>
+                            <li><span class="plus-icon"></span>Recipe submission</li>
+                            <li><span class="plus-icon"></span>MongoDB storage</li>
+                            <li><span class="plus-icon"></span>Dynamic content</li>
+                            <li><span class="plus-icon"></span>Ingredient search</li>
+                            <li><span class="plus-icon"></span>Recipe ratings</li>
+                            <li><span class="plus-icon"></span>Registration</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <ul>
+                            <li><span class="plus-icon"></span>Responsive design</li>
+                            <li><span class="plus-icon"></span>Recipe list with images</li>
+                            <li><span class="plus-icon"></span>Image upload</li>
+                            <li><span class="plus-icon"></span>User authentication</li>
+                            <li><span class="plus-icon"></span>Recipe comments</li>
                         </ul>
                     </div>
                 </div>
             </section>
-
             <hr>
 
-            <section class="scraping">
-                <h2>Data Scraping</h2>
-                <p>The <code>OTOMOTOWebScraper.py</code> script uses Selenium to scrape vehicle listings from Otomoto, collecting data such as brand, model, mileage, price, engine power, gearbox, and fuel type.</p>
+            <section class="technologies-used">
+                <h2>Technologies Used</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <ul>
+                            <li><img src="/static/Images/SVG/python.svg" alt="Python" class="tech-icon">Python</li>
+                            <li><img src="/static/Images/SVG/selenium.svg" alt="Selenium" class="tech-icon">Selenium</li>
+                            <li><img src="/static/Images/SVG/pandas.svg" alt="Pandas" class="tech-icon">Pandas</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <ul>
+                            <li><img src="/static/Images/SVG/scikit-learn.svg" alt="Scikit-learn" class="tech-icon">Scikit-learn</li>
+                            <li><img src="/static/Images/SVG/matplotlib.svg" alt="Matplotlib" class="tech-icon">Matplotlib</li>
+                            <li><img src="/static/Images/SVG/joblib.svg" alt="Joblib" class="tech-icon">Joblib</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <section class="demo">
+                <h2>Demo</h2>
+            
+                <!-- Data Scraping -->
+                <h3>Data Scraping</h3>
+<div class="flex-container">
+    <div class="flex-item">
+        <img src="/static/Images/MLVehiclePriceAdvisor/ScrapingBrand.gif" alt="Data Scraping for a Brand">
+        <p>Scraping listings for a specific brand.</p>
+    </div>
+    <div class="flex-item">
+        <img src="/static/Images/MLVehiclePriceAdvisor/Skipping.gif" alt="Checking for Existing Data by Fuel Type">
+        <p>Checking if data has already been collected for a specific fuel type.</p>
+    </div>
+    <div class="flex-item">
+        <img src="/static/Images/MLVehiclePriceAdvisor/Skipping2.png" alt="Skipping Already Processed Brands">
+        <p>Skipping brands with existing CSV files to avoid duplicates.</p>
+    </div>
+</div>
+
+<hr>
+
                 
-                <h3>Scraping Data for a Brand</h3>
-                <img src="/static/Images/MLVehiclePriceAdvisor/ScrapingBrand.gif" alt="Data Scraping for a Brand">
-                <p>Scraping listings for a specific brand.</p>
-                
-                <h3>Checking for Existing Data by Fuel Type</h3>
-                <img src="/static/Images/MLVehiclePriceAdvisor/Skipping.gif" alt="Checking for Existing Data by Fuel Type">
-                <p>Checking if data has already been collected for a specific fuel type.</p>
-                
-                <h3>Skipping Already Processed Brands</h3>
-                <img src="/static/Images/MLVehiclePriceAdvisor/Skipping2.png" alt="Skipping Already Processed Brands">
-                <p>Skipping brands with existing CSV files to avoid duplicates.</p>
+            
+                <!-- Model Training -->
+                <h3>Model Training</h3>
+                <div class="demo-img-container">
+                    <img src="/static/Images/training_screenshot.png" alt="Model Training Screenshot">
+                </div>
+                <p>The <code>RandomForest_Training.py</code> script trains a Random Forest model using the processed data to predict vehicle prices. The model is then saved for later use.</p>
+            
+                <hr>
+            
+                <!-- Source Code -->
+                <section class="source-code">
+                    <h2>Source Code</h2>
+                    <p>You can view the source code: <a href="https://github.com/maggyy666/MLVehiclePriceAdvisor">HERE</a></p>
+                    <p><a href="/articles.html">Back to Portfolio</a></p>
+                </section>
             </section>
-
-            <hr>
-
-            <section class="processing">
-                <h2>Data Processing</h2>
-                <p>The data_processing.py script processes the scraped data, merging CSV files, removing invalid entries, and formatting the data for machine learning analysis.</p>
-                <img src="/static/Images/processing_screenshot.png" alt="Data Processing Screenshot">
-            </section>
-
-            <hr>
-
-            <section class="training">
-                <h2>Model Training</h2>
-                <p>The RandomForest_Training.py script trains a Random Forest model using the processed data to predict vehicle prices. The model is then saved for later use.</p>
-                <img src="/static/Images/training_screenshot.png" alt="Model Training Screenshot">
-            </section>
-
-            <hr>
-
-            <section class="source-code">
-                <h2>Source Code</h2>
-                <p>You can view the source code: <a href="https://github.com/maggyy666/MLVehiclePriceAdvisor">HERE</a></p>
-                <p><a href="/articles.html">Back to Portfolio</a></p>
-            </section>
+            
         </main>
 
         <footer>
