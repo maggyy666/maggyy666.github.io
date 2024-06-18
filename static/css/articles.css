@@ -1,11 +1,9 @@
-/* Ogólne style resetujące */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Czcionki */
 @font-face {
     font-family: 'Font-UltraLight';
     src: url('/static/fonts/Barlow/Barlow-ExtraLight.ttf') format('opentype');
@@ -19,7 +17,6 @@
     src: url('/static/fonts/Barlow/Barlow-SemiBold.ttf') format('opentype');
 }
 
-/* Stylowanie ciała strony */
 body {
     background-image: url('/static/Images/hans.jpg');
     background-size: cover;
@@ -356,3 +353,25 @@ h1.main-title {
     margin-top: 10px;
     font-size: 16px; /* Rozmiar czcionki opisu */
 }
+/* Ensure this style is in your articles.css or demo-styles.css */
+.dataset-item {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align content in a column */
+    text-align: center; /* Center text content if any */
+    margin-bottom: 20px; /* Space between dataset items */
+}
+
+.demo-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Block level for margin auto to work */
+}
+
+
