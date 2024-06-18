@@ -1,5 +1,3 @@
-/* Przeniesione i zaktualizowane style z main.css */
-
 /* Ogólne style resetujące */
 * {
     margin: 0;
@@ -29,6 +27,7 @@ body {
     font-family: 'Font-UltraLight', sans-serif;
     line-height: 1.6;
     overflow-y: auto;
+    overflow-x: hidden; /* Brak przewijania poziomego */
 }
 
 body::before {
@@ -48,6 +47,7 @@ body::before {
     background-color: rgba(255, 255, 255, 0.7);
     width: 80%;
     max-width: 1200px;
+    min-width: 600px;
     margin: auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -57,9 +57,9 @@ body::before {
     top: 50%;
     transform: translateY(-50%);
     transition: height 0.5s ease-in-out;
-    /* Dodaj animację */
     animation: slide-in 1.5s ease-out forwards;
 }
+
 .content {
     display: none;
     position: absolute;
@@ -81,63 +81,19 @@ body::before {
 .content.slide-right {
     left: 100%;
 }
-/* Definicja animacji */
-@keyframes slide-in {
-    from {
-        transform: translateX(-100%) translateY(-50%);
-    }
-    to {
-        transform: translateX(0) translateY(-50%);
-    }
-}
 
 /* Stylowanie nawigacji */
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
-
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Wyśrodkowanie ikon w pionie */
-    padding: 0;
-    width: 100%;
-    padding:0;
-    margin:0;
-
-}
-
-nav ul li {
-    flex:1;
-    text-align: center;
-    margin:0;
-    padding:15px;
-    border-bottom: 1px solid #ccc;
-
-}
-
-nav ul li a {
-    display: block;
-    width: 60px; /* Szerokość ikon */
-    height: 60px; /* Wysokość ikon */
-    margin: 0 auto;
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    transition: background-image 0.3s ease;
-}
-
-/* Dodanie tła dla ikon - czarne ikony */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Wyśrodkowanie ikon w pionie */
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     width: 100%;
     margin: 0;
@@ -153,64 +109,57 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    width: 60px; /* Szerokość ikon */
-    height: 60px; /* Wysokość ikon */
+    width: 60px;
+    height: 60px;
     margin: 0 auto;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    transition: background-image 0.3s ease, transform 0.3s ease; /* Dodanie transformacji */
+    transition: background-image 0.3s ease;
 }
 
 /* Dodanie tła dla ikon - czarne ikony */
 nav ul li a.home {
-    background-image: url('/static/Images/Header/home.png'); /* Czarna ikona dla Home */
+    background-image: url('/static/Images/Header/home.png');
 }
 
 nav ul li a.about {
-    background-image: url('/static/Images/Header/group.png'); /* Czarna ikona dla About Me */
+    background-image: url('/static/Images/Header/group.png');
 }
 
 nav ul li a.articles {
-    background-image: url('/static/Images/Header/layers.png'); /* Czarna ikona dla Articles */
+    background-image: url('/static/Images/Header/layers.png');
 }
 
 nav ul li a.github {
-    background-image: url('/static/Images/Header/github.png'); /* Czarna ikona dla GitHub */
+    background-image: url('/static/Images/Header/github.png');
 }
 
 nav ul li a.linkedin {
-    background-image: url('/static/Images/Header/linkedin.png'); /* Czarna ikona dla LinkedIn */
+    background-image: url('/static/Images/Header/linkedin.png');
 }
 
 /* Zmiana tła na szare ikony po najechaniu */
 nav ul li a.home:hover {
-    background-image: url('/static/Images/Header/home-grey.png'); /* Szara ikona dla Home */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+    background-image: url('/static/Images/Header/home-grey.png');
 }
 
 nav ul li a.about:hover {
-    background-image: url('/static/Images/Header/group-grey.png'); /* Szara ikona dla About Me */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+    background-image: url('/static/Images/Header/group-grey.png');
 }
 
 nav ul li a.articles:hover {
-    background-image: url('/static/Images/Header/layers-grey.png'); /* Szara ikona dla Articles */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+    background-image: url('/static/Images/Header/layers-grey.png');
 }
 
 nav ul li a.github:hover {
-    background-image: url('/static/Images/Header/github-grey.png'); /* Szara ikona dla GitHub */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+    background-image: url('/static/Images/Header/github-grey.png');
 }
 
 nav ul li a.linkedin:hover {
-    background-image: url('/static/Images/Header/linkedin-grey.png'); /* Szara ikona dla LinkedIn */
-    transform: translateY(-5px); /* Podnoszenie ikony */
+    background-image: url('/static/Images/Header/linkedin-grey.png');
 }
-
-
 
 /* Stylowanie głównej sekcji */
 main {
@@ -262,7 +211,6 @@ footer {
     border-radius: 20px;
     font-size: 1em;
     border-top: 1px solid #ccc;
-
 }
 
 .read-more {
@@ -295,7 +243,7 @@ footer {
 
 .profile-info h2 {
     margin-bottom: 10px;
-    font-size:4em;
+    font-size: 4em;
 }
 
 .profile-info p {
@@ -313,5 +261,162 @@ footer {
     max-height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border:5px solid black;
+    border: 5px solid black;
+}
+
+/* Media queries */
+@media (max-width: 800px) {
+    body {
+        overflow-x: hidden; /* Brak przewijania poziomego */
+    }
+
+    .container {
+        width: 90%; /* Szerokość kontenera na 90% szerokości ekranu */
+        min-width: 0; /* Brak minimalnej szerokości */
+        height: auto;
+        padding: 5%;
+        margin: 5% auto; /* Ustalanie marginesów */
+        border-radius: 10px; /* Zmniejszenie zaokrąglenia */
+        box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
+        backdrop-filter: none; /* Brak efektu rozmycia tła */
+        background-color: rgba(255, 255, 255, 0.9); /* Większa przezroczystość */
+    }
+
+    .profile {
+        flex-direction: column; /* Ustawienie obrazka pod tekstem */
+        align-items: center;
+        gap: 10px; /* Dodanie odstępu między elementami */
+    }
+
+    .profile-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .profile-info h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-info p {
+        font-size: 1em;
+    }
+
+    .profile-picture img {
+        width: 200px; /* Większy rozmiar obrazka */
+        height: 200px;
+        max-width: none;
+        max-height: none;
+        border-radius: 10px; /* Kwadratowy kształt */
+        border: 2px solid #333;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5% 0;
+    }
+
+    nav ul li {
+        padding: 2%;
+    }
+
+    nav ul li a {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 5%;
+        margin-top: 10%;
+        color:black;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article .content {
+        padding-right: 0;
+    }
+
+    .article .image {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
+        height: auto;
+        padding: 10%;
+        margin: 5% auto; /* Ustalanie marginesów */
+        border-radius: 10px; /* Zmniejszenie zaokrąglenia */
+        box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
+        backdrop-filter: none; /* Brak efektu rozmycia tła */
+        background-color: rgba(255, 255, 255, 0.95); /* Większa przezroczystość */
+    }
+
+    .profile {
+        flex-direction: column; /* Ustawienie obrazka pod tekstem */
+        align-items: center;
+        gap: 10px; /* Dodanie odstępu między elementami */
+    }
+
+    .profile-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .profile-info h2 {
+        font-size: 1.2em;
+    }
+
+    .profile-info p {
+        font-size: 0.8em;
+    }
+
+    .profile-picture img {
+        width: 150px; /* Większy rozmiar obrazka */
+        height: 150px;
+        max-width: none;
+        max-height: none;
+        border-radius: 10px; /* Kwadratowy kształt */
+        border: 1px solid #333;
+    }
+
+    nav ul li {
+        padding: 5%;
+    }
+
+    nav ul li a {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer {
+        font-size: 0.6em;
+        padding: 10%;
+        margin-top: 20%;
+        background-color: rgba(0, 0, 0, 0.5); /* Przezroczystość */
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article .content {
+        padding-right: 0;
+    }
+
+    .article .image {
+        margin-bottom: 10px;
+    }
 }
