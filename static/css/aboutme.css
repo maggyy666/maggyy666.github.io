@@ -224,3 +224,292 @@ footer {
     border-top: 1px solid #ccc;
 
 }
+.resume-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.resume-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Media queries */
+@media (max-width: 800px) {
+    body {
+        overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .container {
+        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
+        min-width: 0; /* Brak minimalnej szerokości */
+        height: auto;
+        padding: 5%;
+        margin: 5% auto; /* Ustalanie marginesów */
+        border-radius: 10px; /* Zmniejszenie zaokrąglenia */
+        box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
+        background-color: rgba(255, 255, 255, 0.9); /* Większa przezroczystość */
+    }
+
+    .profile {
+        flex-direction: column; /* Ustawienie obrazka pod tekstem */
+        align-items: center;
+        gap: 10px; /* Dodanie odstępu między elementami */
+    }
+
+    .profile-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .profile-info h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-info p {
+        font-size: 1em;
+    }
+
+    .profile-picture img {
+        width: 200px; /* Większy rozmiar obrazka */
+        height: 200px;
+        max-width: none;
+        max-height: none;
+        border-radius: 10px; /* Kwadratowy kształt */
+        border: 2px solid #333;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5% 0;
+    }
+
+    nav ul li {
+        padding: 2%;
+    }
+
+    nav ul li a {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 5%;
+        margin-top: 10%;
+        color:black;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article .content {
+        padding-right: 0;
+    }
+
+    .article .image {
+        margin-bottom: 10px;
+    }
+    .resume-link {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Media queries dla maksymalnej responsywności */
+@media (max-width: 500px) {
+    body {
+        overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .container {
+        width: 95%; /* Zwiększenie szerokości kontenera do 95% */
+        height: auto;
+        padding: 5%;
+        margin: 5% auto; /* Marginesy */
+        border-radius: 10px; /* Mniejsze zaokrąglenia */
+        box-shadow: none; /* Brak cieniowania */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
+        background-color: rgba(255, 255, 255, 0.98); /* Większa przezroczystość */
+    }
+
+    .profile {
+        flex-direction: column; /* Ustawienie obrazka pod tekstem */
+        align-items: center;
+        gap: 15px; /* Większy odstęp między elementami */
+    }
+
+    .profile-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .profile-info h2 {
+        font-size: 2em; /* Dostosowanie rozmiaru tekstu */
+    }
+
+    .profile-info p {
+        font-size: 1.2em; /* Dostosowanie rozmiaru tekstu */
+    }
+
+    .profile-picture img {
+        width: 350px; /* Dostosowanie rozmiaru obrazka */
+        height: 350px;
+        max-width: none;
+        max-height: none;
+        border-radius: 10px; /* Kwadratowy kształt */
+        border: 2px solid rgba(0,0,0,0);
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5% 0;
+    }
+
+    nav ul li {
+        padding: 2%;
+    }
+
+    nav ul li a {
+        width: 40px; /* Większy rozmiar ikon */
+        height: 40px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 5%;
+        margin-top: 10%;
+        color: black;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article .content {
+        padding-right: 0;
+    }
+
+    .article .image {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .resume-link {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .container {
+        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
+        height: auto;
+        padding: 5%;
+        margin: 5% auto; /* Marginesy */
+        border-radius: 5px; /* Mniejsze zaokrąglenia */
+        box-shadow: none; /* Brak cieniowania */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
+        background-color: rgba(255, 255, 255, 0.98); /* Większa przezroczystość */
+    }
+
+    .profile-info h2 {
+        font-size: 1.5em; /* Zwiększony rozmiar tekstu */
+        margin-bottom: 15px;
+    }
+
+    .intro-text {
+        font-size: 1em; /* Zwiększony rozmiar tekstu */
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .profile-picture img {
+        width: 100px; /* Mniejszy rozmiar obrazka */
+        height: 100px;
+        max-width: none;
+        max-height: none;
+        border-radius: 10px; /* Kwadratowy kształt */
+        border: 1px solid rgba(0,0,0,0);
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Pozwoli na zawijanie wierszy */
+        justify-content: center;
+        padding: 5% 0;
+    }
+
+    nav ul li {
+        width: 50%; /* Dwie ikony w wierszu */
+        padding: 10px; /* Dodanie odstępu */
+    }
+
+    nav ul li a {
+        width: 40px; /* Mniejszy rozmiar ikon */
+        height: 40px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 5%;
+        margin-top: 5%;
+        color: black;
+        border-radius: 5px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article .content {
+        padding-right: 0;
+    }
+
+    .article .image {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .resume-link {
+        display: block;
+        margin: 10px 0;
+        font-size: 0.8em;
+    }
+}
