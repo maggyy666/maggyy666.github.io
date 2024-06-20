@@ -98,7 +98,6 @@ nav ul li {
     margin: 0;
     padding: 15px;
     border-bottom: 1px solid #ccc;
-    
 }
 
 nav ul li a {
@@ -249,7 +248,6 @@ h2 a:hover {
 
 p {
     margin-bottom: 20px;
-
 }
 
 .read-more {
@@ -307,59 +305,106 @@ footer {
     color: white;
 }
 
-/* Mobile Specific Styles */
+
+/* Media queries for mobile devices */
 @media (max-width: 800px) {
-    body {
-        overflow-x: hidden; /* Brak przewijania poziomego */
-    }
-
     .container {
-        width: 90%; /* Szerokość kontenera na 90% szerokości ekranu */
-        min-width: 0; /* Brak minimalnej szerokości */
+        width: 90%;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .articles-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article-tile {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px; 
+        align-items: flex-start; 
+        text-align: left; 
+    }
+
+    .article-content {
+        flex: none;
+        width: 100%; 
+    }
+
+    .article-image {
+        flex: none;
+        width: 100%; 
+    }
+
+    .article-image img {
+        width: 100%;
         height: auto;
-        padding: 5%;
-        margin: 5% auto; /* Ustalanie marginesów */
-        border-radius: 10px; /* Zmniejszenie zaokrąglenia */
-        box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
-        background-color: rgba(255, 255, 255, 0.9); /* Większa przezroczystość */
+        border-radius: 10px;
     }
 
-    .profile {
-        flex-direction: column; /* Ustawienie obrazka pod tekstem */
-        align-items: center;
-        gap: 10px; /* Dodanie odstępu między elementami */
+    .article-description {
+        font-size: 1em;
+        line-height: 1.4;
     }
 
-    .profile-info {
-        text-align: center; /* Wyśrodkowanie tekstu */
-    }
-
-    .profile-info h2 {
+    h2 {
         font-size: 1.5em;
     }
 
-    .profile-info p {
+    .tech-name {
         font-size: 1em;
     }
 
-    .profile-picture img {
-        width: 200px; /* Większy rozmiar obrazka */
-        height: 200px;
-        max-width: none;
-        max-height: none;
-        border-radius: 10px; /* Kwadratowy kształt */
-        border: 2px solid #333;
+    .tag {
+        padding: 8px 12px;
+        font-size: 0.9em;
     }
 
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 5% 0;
+    nav ul li a {
+        width: 50px;
+        height: 50px;
     }
 
-    nav ul li {
-        padding: 2%;
+    footer {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        margin: 2% auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .article-tile {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .article-content {
+        padding-right: 0;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .tech-name {
+        font-size: 0.8em;
+    }
+
+    .article-description {
+        font-size: 0.9em;
+    }
+
+    .tag {
+        padding: 5px 10px;
+        font-size: 0.8em;
     }
 
     nav ul li a {
@@ -368,123 +413,53 @@ footer {
     }
 
     footer {
-        font-size: 0.8em;
-        padding: 5%;
-        margin-top: 10%;
-        background-color: rgba(0, 0, 0, 0.5); /* Przezroczystość */
-        color: white;
-        border-radius: 10px;
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .article-tile {
-        flex-direction: column; /* Ustawienie artykułów w kolumnach */
-        align-items: center;
-        padding: 10px; /* Zmniejszenie odstępu wewnętrznego */
-    }
-
-    .article-content {
-        text-align: center; /* Wyśrodkowanie tekstu */
-        padding: 10px 0; /* Dodanie odstępu nad i pod tekstem */
-    }
-
-    .article-image {
-        margin-bottom: 10px;
-        width: 100%; /* Rozciągnięcie obrazka na pełną szerokość */
-    }
-
-    .tags {
-        flex-wrap: wrap; /* Zawijanie tagów */
-        justify-content: center;
-    }
-
-    .tag {
-        margin: 5px; /* Dodanie marginesów do tagów */
+        font-size: 0.7em;
+        padding: 5px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 390px) {
     .container {
-        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
-        height: auto;
-        padding: 10%;
-        margin: 5% auto; /* Ustalanie marginesów */
-        border-radius: 10px; /* Zmniejszenie zaokrąglenia */
-        box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
-        background-color: rgba(255, 255, 255, 0.95); /* Większa przezroczystość */
+        width: 100%;
+        margin: 0 auto;
+        padding: 5%;
+        border-radius: 5px;
     }
 
-    .profile {
-        flex-direction: column; /* Ustawienie obrazka pod tekstem */
-        align-items: center;
-        gap: 10px; /* Dodanie odstępu między elementami */
+    .article-tile {
+        padding: 5px;
+        gap: 5px;
     }
 
-    .profile-info {
-        text-align: center; /* Wyśrodkowanie tekstu */
+    .article-content {
+        padding-right: 0;
     }
 
-    .profile-info h2 {
-        font-size: 1.2em;
+    h2 {
+        font-size: 1em;
     }
 
-    .profile-info p {
+    .tech-name {
+        font-size: 0.7em;
+    }
+
+    .article-description {
         font-size: 0.8em;
     }
 
-    .profile-picture img {
-        width: 150px; /* Większy rozmiar obrazka */
-        height: 150px;
-        max-width: none;
-        max-height: none;
-        border-radius: 10px; /* Kwadratowy kształt */
-        border: 1px solid #333;
-    }
-
-    nav ul li {
-        padding: 5%;
+    .tag {
+        padding: 3px 8px;
+        font-size: 0.7em;
     }
 
     nav ul li a {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
 
     footer {
         font-size: 0.6em;
-        padding: 10%;
-        margin-top: 20%;
-        background-color: rgba(0, 0, 0, 0.5); /* Przezroczystość */
-        color: white;
-        border-radius: 10px;
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .article-tile {
-        flex-direction: column; /* Ustawienie artykułów w kolumnach */
-        align-items: center;
-        padding: 10px; /* Zmniejszenie odstępu wewnętrznego */
-    }
-
-    .article-content {
-        text-align: center; /* Wyśrodkowanie tekstu */
-        padding: 10px 0; /* Dodanie odstępu nad i pod tekstem */
-    }
-
-    .article-image {
-        margin-bottom: 10px;
-        width: 100%; /* Rozciągnięcie obrazka na pełną szerokość */
-    }
-
-    .tags {
-        flex-wrap: wrap; /* Zawijanie tagów */
-        justify-content: center;
-    }
-
-    .tag {
-        margin: 5px; /* Dodanie marginesów do tagów */
+        padding: 5px;
     }
 }
+
