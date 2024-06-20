@@ -82,7 +82,6 @@ body::before {
     left: 100%;
 }
 
-/* Stylowanie nawigacji */
 nav {
     display: flex;
     justify-content: center;
@@ -92,7 +91,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 0;
     width: 100%;
@@ -116,10 +115,9 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.3s ease, transform 0.3s ease;
 }
 
-/* Dodanie tła dla ikon - czarne ikony */
 nav ul li a.home {
     background-image: url('/static/Images/Header/home.png');
 }
@@ -140,25 +138,29 @@ nav ul li a.linkedin {
     background-image: url('/static/Images/Header/linkedin.png');
 }
 
-/* Zmiana tła na szare ikony po najechaniu */
 nav ul li a.home:hover {
     background-image: url('/static/Images/Header/home-grey.png');
+    transform: translateY(-5px);
 }
 
 nav ul li a.about:hover {
     background-image: url('/static/Images/Header/group-grey.png');
+    transform: translateY(-5px);
 }
 
 nav ul li a.articles:hover {
     background-image: url('/static/Images/Header/layers-grey.png');
+    transform: translateY(-5px);
 }
 
 nav ul li a.github:hover {
     background-image: url('/static/Images/Header/github-grey.png');
+    transform: translateY(-5px);
 }
 
 nav ul li a.linkedin:hover {
     background-image: url('/static/Images/Header/linkedin-grey.png');
+    transform: translateY(-5px);
 }
 
 /* Stylowanie głównej sekcji */
@@ -261,24 +263,28 @@ footer {
     max-height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 2px solid black;
 }
 
 /* Media queries */
 @media (max-width: 800px) {
     body {
         overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     .container {
-        width: 90%; /* Szerokość kontenera na 90% szerokości ekranu */
+        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
         min-width: 0; /* Brak minimalnej szerokości */
         height: auto;
         padding: 5%;
         margin: 5% auto; /* Ustalanie marginesów */
         border-radius: 10px; /* Zmniejszenie zaokrąglenia */
         box-shadow: none; /* Brak cieniowania dla uproszczenia wyglądu */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
         background-color: rgba(255, 255, 255, 0.9); /* Większa przezroczystość */
     }
 
@@ -349,19 +355,23 @@ footer {
 }
 
 /* Media queries dla maksymalnej responsywności */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     body {
         overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     .container {
-        width: 95%; /* Zwiększenie szerokości kontenera */
+        width: 95%; /* Zwiększenie szerokości kontenera do 95% */
         height: auto;
         padding: 5%;
         margin: 5% auto; /* Marginesy */
         border-radius: 10px; /* Mniejsze zaokrąglenia */
         box-shadow: none; /* Brak cieniowania */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
         background-color: rgba(255, 255, 255, 0.98); /* Większa przezroczystość */
     }
 
@@ -376,7 +386,7 @@ footer {
     }
 
     .profile-info h2 {
-        font-size: 2em; /* Zmniejszenie rozmiaru tekstu */
+        font-size: 2em; /* Dostosowanie rozmiaru tekstu */
     }
 
     .profile-info p {
@@ -384,91 +394,12 @@ footer {
     }
 
     .profile-picture img {
-        width: 250px; /* Dostosowanie rozmiaru obrazka */
-        height: 250px;
+        width: 350px; /* Dostosowanie rozmiaru obrazka */
+        height: 350px;
         max-width: none;
         max-height: none;
         border-radius: 10px; /* Kwadratowy kształt */
         border: 2px solid rgba(0,0,0,0);
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 5% 0;
-    }
-
-    nav ul li {
-        padding: 2%;
-    }
-
-    nav ul li a {
-        width: 50px; /* Większy rozmiar ikon */
-        height: 50px;
-    }
-
-    footer {
-        font-size: 2em;
-        padding: 5%;
-        margin-top: 10%;
-        color: black;
-        border-radius: 10px;
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .article {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .article .content {
-        padding-right: 0;
-    }
-
-    .article .image {
-        margin-bottom: 10px;
-        width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .container {
-        width: 100%; /* Szerokość kontenera na 98% szerokości ekranu */
-        height: auto;
-        padding: 10%;
-        margin: 2% auto; /* Zmniejszenie marginesów */
-        border-radius: 10px; /* Mniejsze zaokrąglenia */
-        box-shadow: none; /* Brak cieniowania */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
-        background-color: rgba(255, 255, 255, 0.98); /* Większa przezroczystość */
-    }
-
-    .profile {
-        flex-direction: column; /* Ustawienie obrazka pod tekstem */
-        align-items: center;
-        gap: 15px; /* Większy odstęp między elementami */
-    }
-
-    .profile-info {
-        text-align: center; /* Wyśrodkowanie tekstu */
-    }
-
-    .profile-info h2 {
-        font-size: 3em; /* Zmniejszenie rozmiaru tekstu */
-    }
-
-    .profile-info p {
-        font-size: 1em; /* Dostosowanie rozmiaru tekstu */
-    }
-
-    .profile-picture img {
-        width: 300px; /* Większy rozmiar obrazka */
-        height: 300px;
-        max-width: none;
-        max-height: none;
-        border-radius: 10px; /* Kwadratowy kształt */
-        border: 1px solid rgba(0,0,0,0);
     }
 
     nav ul {
@@ -487,7 +418,8 @@ footer {
     }
 
     footer {
-        font-size: 1em;
+        font-size: 0.8em;
+        padding: 5%;
         margin-top: 10%;
         color: black;
         border-radius: 10px;
@@ -510,15 +442,23 @@ footer {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden; /* Brak przewijania poziomego */
+        background-image: url('/static/Images/hans.jpg'); /* Tło jak w wersji desktopowej */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
     .container {
-        width: 97%; /* Pełna szerokość kontenera */
+        width: 95%; /* Szerokość kontenera na 95% szerokości ekranu */
         height: auto;
-        padding: 10%;
-        margin: 0 auto; /* Brak marginesów */
+        padding: 5%;
+        margin: 5% auto; /* Marginesy */
         border-radius: 5px; /* Mniejsze zaokrąglenia */
         box-shadow: none; /* Brak cieniowania */
-        backdrop-filter: none; /* Brak efektu rozmycia tła */
+        backdrop-filter: blur(3px); /* Delikatny efekt rozmycia tła */
         background-color: rgba(255, 255, 255, 0.98); /* Większa przezroczystość */
     }
 
@@ -533,11 +473,11 @@ footer {
     }
 
     .profile-info h2 {
-        font-size: 2.5em; /* Zmniejszenie rozmiaru tekstu */
+        font-size: 2em; /* Dostosowanie rozmiaru tekstu */
     }
 
     .profile-info p {
-        font-size: 0.9em; /* Dostosowanie rozmiaru tekstu */
+        font-size: 0.5em; /* Dostosowanie rozmiaru tekstu */
     }
 
     .profile-picture img {
@@ -565,7 +505,7 @@ footer {
     }
 
     footer {
-        font-size: 1em;
+        font-size: 0.6em;
         padding: 5%;
         margin-top: 5%;
         color: black;
