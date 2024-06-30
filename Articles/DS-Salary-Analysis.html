@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLVehiclePricePredictor</title>
+    <title>DS Salary Analysis Project</title>
     <link rel="stylesheet" href="/static/css/articles.css">
-    <link rel="stylesheet" href="/static/css/demo-styles.css"> <!-- Nowy plik stylów -->
 </head>
 <body>
     <div class="container">
@@ -22,15 +21,14 @@
         </header>
 
         <main>
-            <h1 class="main-title">MLVehiclePriceAdvisor</h1>
+            <h1 class="main-title">DS Salary Analysis Project</h1>
             <section class="intro">
-                <h2>Intro</h2>
-                <p><strong>MLVehiclePriceAdvisor</strong> is a <strong>Python-based</strong> project designed to scrape vehicle data from the popular automotive marketplace <strong>Otomoto</strong>. The data is then processed and used to train a <strong>random forest machine learning model</strong> to predict optimal vehicle pricing based on their features.</p>
+                <h2>Introduction</h2>
+                <p>The DS Salary Analysis Project is an application designed for visualizing and analyzing data science salary information. The application is built using the Tkinter library for the user interface and Matplotlib for data visualization. It leverages custom styling and plot generation to provide an intuitive and interactive experience for users to explore salary data across various dimensions.</p>
                 <ul>
-                    <li>The script extracts vehicle data from <strong>Otomoto</strong> and saves it into <strong>CSV files</strong> for each car brand.</li>
-                    <li>The project processes and cleans the data, preparing it for <strong>machine learning analysis</strong>.</li>
-                    <li>The <strong>random forest model</strong> predicts optimal vehicle prices based on attributes like mileage, production year, and engine power.</li>
-                    <li>A <strong>console application</strong> allows users to input vehicle details and receive price recommendations.</li>
+                    <li>Utilizes the Tkinter library to create a user-friendly interface with a modern appearance using customtkinter.</li>
+                    <li>Generates dynamic plots (bar charts, pie charts, box plots) using Matplotlib to visualize salary data.</li>
+                    <li>Allows users to analyze data by job title categories, experience levels, and locations.</li>
                 </ul>
             </section>
 
@@ -41,21 +39,9 @@
                 <div class="features-container">
                     <div class="feature-item">
                         <ul>
-                            <li><span class="plus-icon"></span><strong>Vehicle data extraction</strong></li>
-                            <li><span class="plus-icon"></span><strong>Data preprocessing</strong></li>
-                            <li><span class="plus-icon"></span><strong>Random forest model</strong></li>
-                            <li><span class="plus-icon"></span><strong>Optimal price prediction</strong></li>
-                            <li><span class="plus-icon"></span><strong>Console application</strong></li>
-                            <li><span class="plus-icon"></span><strong>Python-based implementation</strong></li>
-                        </ul>
-                    </div>
-                    <div class="feature-item">
-                        <ul>
-                            <li><span class="plus-icon"></span><strong>CSV data storage</strong></li>
-                            <li><span class="plus-icon"></span><strong>Data cleaning</strong></li>
-                            <li><span class="plus-icon"></span><strong>Responsive predictions</strong></li>
-                            <li><span class="plus-icon"></span><strong>User-friendly interface</strong></li>
-                            <li><span class="plus-icon"></span><strong>Machine learning analysis</strong></li>
+                            <li><span class="plus-icon"></span>User-friendly interface</li>
+                            <li><span class="plus-icon"></span>Dynamic data visualization</li>
+                            <li><span class="plus-icon"></span>Category analysis by job title, experience level, and location</li>
                         </ul>
                     </div>
                 </div>
@@ -67,171 +53,39 @@
                 <div class="features-container">
                     <div class="feature-item">
                         <ul>
-                            <li><img src="/static/Images/SVG/python.svg" alt="Python" class="tech-icon"><strong>Python</strong></li>
-                            <li><img src="/static/Images/SVG/selenium.svg" alt="Selenium" class="tech-icon"><strong>Selenium</strong></li>
-                            <li><img src="/static/Images/SVG/pandas-icon.svg" alt="Pandas" class="tech-icon"><strong>Pandas</strong></li>
-                        </ul>
-                    </div>
-                    <div class="feature-item">
-                        <ul>
-                            <li><img src="/static/Images/SVG/scikit-learn.svg" alt="Scikit-learn" class="tech-icon"><strong>Scikit-learn</strong></li>
-                            <li><img src="/static/Images/332661.png" alt="Joblib" class="tech-icon"><strong>Joblib</strong></li>
+                            <li><img src="/static/Images/SVG/python.svg" alt="Python" class="tech-icon">Python</li>
+                            <li><img src="/static/Images/DS-Salary-Analysis/tkinter.png" alt="Tkinter" class="tech-icon">Tkinter</li>
+                            <li><img src="/static/Images/SVG/matplotlib-icon.svg" alt="Matplotlib" class="tech-icon">Matplotlib</li>
+                            <li><img src="/static/Images/SVG/pandas-icon.svg" alt="Pandas" class="tech-icon">Pandas</li>
                         </ul>
                     </div>
                 </div>
             </section>
             <hr>
 
-            <section class="demo">
-                <h2>Demo</h2>
-                
-                <h3>Data Scraping</h3>
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/ScrapingBrand.gif" alt="Data Scraping for a Brand">
-                        <p>Scraping listings for a specific brand.</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/Skipping.gif" alt="Checking for Existing Data by Fuel Type">
-                        <p>Checking if data has already been collected for a specific fuel type.</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/Skipping2.png" alt="Skipping Already Processed Brands">
-                        <p>Skipping brands with existing CSV files to avoid duplicates.</p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <h3>Data Processing</h3>
-<div class="demo-img-container">
-    <div class="image-with-caption left-aligned">
-        <img src="/static/Images/MLVehiclePriceAdvisor/RawData.png" alt="Dataset Before Processing" class="demo-image">
-        <p class="image-caption">Original dataset collected directly from <strong>Otomoto</strong>, containing raw and unprocessed data.</p>
-    </div>
-    <section class="features right-aligned">
-        <ul>
-            <li><span class="plus-icon"></span><strong>Data Merging:</strong> Combines multiple <strong>CSV files</strong> from different car brands into one dataset.</li>
-            <li><span class="plus-icon"></span><strong>Invalid Data Removal:</strong> Removes invalid entries and non-numeric units (e.g., 'km', 'cm³', 'KM').</li>
-            <li><span class="plus-icon"></span><strong>Price Conversion:</strong> Converts prices to numerical format by removing commas and changing to floats.</li>
-            <li><span class="plus-icon"></span><strong>Consistency Check:</strong> Ensures all entries are formatted consistently.</li>
-        </ul>
-    </section>
-</div>
-
-<div class="demo-img-container">
-    <section class="features left-aligned">
-        <ul>
-            <li><span class="plus-icon"></span><strong>Data Conversion:</strong> Converts mileage, engine power, and prices to float format for consistency.</li>
-            <li><span class="plus-icon"></span><strong>Space Removal:</strong> Removes spaces and ensures all numeric fields are formatted correctly.</li>
-            <li><span class="plus-icon"></span><strong>Dataset Balancing:</strong> Adjusts dataset entries to ensure a balanced representation.</li>
-            <li><span class="plus-icon"></span><strong>Data Validation:</strong> Checks for missing or corrupted data entries.</li>
-        </ul>
-    </section>
-    <div class="image-with-caption right-aligned">
-        <img src="/static/Images/MLVehiclePriceAdvisor/Output.png" alt="Dataset After Processing" class="demo-image">
-        <p class="image-caption">Processed dataset, cleaned and formatted for <strong>machine learning analysis</strong>.</p>
-    </div>
-</div>
-
-                <hr>
-                <h3>Model Training</h3>
-                <div class="demo-img-container">
-                    <div class="image-with-caption">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/ModelTraining.png" alt="Model Training Screenshot" class="demo-image">
-                        <p class="image-caption">The <code>RandomForest_Training.py</code> script trains a <strong>Random Forest</strong> model to predict vehicle prices.</p>
-                    </div>
-                    <section class="features">
-                        <ul style="font-size: 0.9em;">
-                            <li><span class="plus-icon"></span><strong>Data Preparation:</strong> Loads data and converts price to numeric format.</li>
-                            <li><span class="plus-icon"></span><strong>Feature Encoding:</strong> Categorical features such as 'brand_name', 'car_model', 'gearbox', and 'fuel' are converted to numerical format using one-hot encoding.</li>
-                            <li><span class="plus-icon"></span><strong>Feature Selection:</strong> Input features <code>X</code> exclude the target price column, which is set as the output <code>y</code>.</li>
-                            <li><span class="plus-icon"></span><strong>Data Splitting:</strong> Data is split into training (80%) and testing (20%) sets to validate model performance.</li>
-                            <li><span class="plus-icon"></span><strong>Batch Training:</strong> Uses a batch size of 10,000 for efficient training on large datasets.</li>
-                            <li><span class="plus-icon"></span><strong>Model Evaluation:</strong> The trained model is evaluated using <strong>Mean Squared Error</strong> (MSE).</li>
-                        </ul>
-                    </section>
-                </div>
-                
-                <hr>
-
-                <h3>Price Prediction - Code Analysis</h3>
-                <div class="demo-img-container">
-                    <section class="features left-aligned">
-                        <ul style="font-size: 0.9em;">
-                            <li><span class="plus-icon"></span><strong>Data Loading:</strong> The model and data are loaded from pre-saved files.</li>
-                            <li><span class="plus-icon"></span><strong>Data Preprocessing:</strong> Converts prices to float and applies one-hot encoding for categorical features.</li>
-                            <li><span class="plus-icon"></span><strong>Feature Engineering:</strong> Adjusts the predicted price based on mileage and production year.</li>
-                            <li><span class="plus-icon"></span><strong>User Input Handling:</strong> The console application prompts the user for details such as brand, model, mileage, and production year.</li>
-                            <li><span class="plus-icon"></span><strong>Data Validation:</strong> Ensures the user input data is complete and valid before proceeding with predictions.</li>
-                            <li><span class="plus-icon"></span><strong>Price Prediction:</strong> The model predicts an initial price based on the provided vehicle details.</li>
-                        </ul>
-                    </section>
-                    <div class="image-with-caption right-aligned">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/PricePrediction1.png" alt="Price Prediction Step 1" class="demo-image">
-                    </div>
-                </div>
-                <div class="demo-img-container">
-                    <div class="image-with-caption left-aligned">
-                        <img src="/static/Images/MLVehiclePriceAdvisor/PricePrediction2.png" alt="Price Prediction Step 2" class="demo-image">
-                    </div>
-                    <section class="features right-aligned">
-                        <ul style="font-size: 0.9em;">
-                            <li><span class="plus-icon"></span><strong>Prediction Adjustment:</strong> The predicted price is adjusted iteratively based on the input mileage and production year.</li>
-                            <li><span class="plus-icon"></span><strong>Comparison with Market Data:</strong> Compares the predicted price with similar listings on <strong>Otomoto</strong> to ensure accuracy.</li>
-                            <li><span class="plus-icon"></span><strong>Final Output:</strong> The adjusted price is displayed to the user, providing an optimal pricing suggestion.</li>
-                            <li><span class="plus-icon"></span><strong>User Interaction:</strong> The application provides feedback based on the availability of data for the specified make and model.</li>
-                            <li><span class="plus-icon"></span><strong>Error Handling:</strong> Handles cases where the model cannot make a prediction due to insufficient data.</li>
-                            <li><span class="plus-icon"></span><strong>Data Logging:</strong> Logs the user input and predicted prices for future analysis and model improvement.</li>
-                        </ul>
-                    </section>
-                </div>
-                
-
-                <hr>
-                <h3>Price Prediction</h3>
-<div class="demo-img-container">
-    <section class="features left-aligned">
-        <ul>
-            <li><span class="plus-icon"></span><strong>Scenario:</strong> Input data matches the average range for existing data.</li>
-            <li><span class="plus-icon"></span><strong>Optimal Price:</strong> The model predicts an optimal price based on typical data points.</li>
-            <li><span class="plus-icon"></span><strong>User Input:</strong> Brand: <strong>Ferrari</strong>, Model: <strong>F430 F1</strong>, Mileage: <strong>50000 km</strong>, Year: <strong>2007</strong>.</li>
-            <li><span class="plus-icon"></span><strong>Result:</strong> The predicted price aligns with the average market price, suggesting a fair valuation.</li>
-        </ul>
-    </section>
-    <div class="left-column right-aligned">
-        <div class="image-with-caption">
-            <img src="/static/Images/MLVehiclePriceAdvisor/ExactPrice_Code.png" alt="Exact Price Prediction Code" class="demo-image">
-        </div>
-        <div class="image-with-caption">
-            <img src="/static/Images/MLVehiclePriceAdvisor/ExactPrice_Site.png" alt="Exact Price Prediction Site" class="demo-image">
-        </div>
-    </div>
-</div>
-
-<div class="demo-img-container">
-    <div class="image-with-caption left-aligned">
-        <img src="/static/Images/MLVehiclePriceAdvisor/image.png" alt="Prediction for Newer Model" class="demo-image">
-    </div>
-    <section class="features right-aligned">
-        <ul>
-            <li><span class="plus-icon"></span><strong>Scenario:</strong> Input data exceeds typical range, representing a newer model year.</li>
-            <li><span class="plus-icon"></span><strong>Price Adjustment:</strong> The model adjusts the predicted price to reflect higher value for newer models.</li>
-            <li><span class="plus-icon"></span><strong>User Input:</strong> Brand: <strong>Ferrari</strong>, Model: <strong>F430 F1</strong>, Mileage: <strong>50000 km</strong>, Year: <strong>2020</strong>.</li>
-            <li><span class="plus-icon"></span><strong>Result:</strong> The predicted price is higher due to the newer model year, providing a realistic market estimation.</li>
-        </ul>
-    </section>
-</div>
-
-<hr>
-
-                <section class="source-code">
-                    <h2>Source Code</h2>
-                    <p>You can view the source code: <a href="https://github.com/maggyy666/MLVehiclePriceAdvisor"><strong>HERE</strong></a></p>
-                    <p><a href="/articles.html">Back to Portfolio</a></p>
-                </section>
+            <section class="setup">
+                <h2>Setup</h2>
+                <p>To set up the project, you will need the following libraries:</p>
+                <ul>
+                    <li>Pandas</li>
+                    <li>Matplotlib</li>
+                    <li>CustomTkinter</li>
+                </ul>
+                <p>Follow these steps to set up the project:</p>
+                <ol>
+                    <li>Clone the repository from GitHub.</li>
+                    <li>Install the required libraries using `pip install -r requirements.txt`.</li>
+                    <li>Run the application using `python main.py`.</li>
+                </ol>
             </section>
+           
+            <hr>
 
+            <section class="source-code">
+                <h2>Source Code</h2>
+                <p>You can view the source code: <a href="https://github.com/maggyy666/DataScience-Salary-Analysis">HERE</a></p>
+                <p><a href="/articles.html">Back to Portfolio</a></p>
+            </section>
         </main>
 
         <footer>
