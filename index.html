@@ -4,37 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakub Czyz Portfolio</title>
-    <link rel="stylesheet" href="static/css/landingpage.css">
+    <link rel="stylesheet" href="static/css/onepage.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="home" title="Home"></a></li>
-                    <li><a href="about.html" class="about" title="About Me"></a></li>
-                    <li><a href="articles.html" class="articles" title="Articles"></a></li>
-                    <li><a href="https://github.com/maggyy666" class="github" title="GitHub"></a></li>
-                    <li><a href="" class="linkedin" title="LinkedIn"></a></li>
+                    <li><a href="#home" class="home" data-section="home" title="Home">Home</a></li>
+                    <li><a href="#about" class="about" data-section="about" title="About Me">About Me</a></li>
+                    <li><a href="#articles" class="articles" data-section="articles" title="Articles">Articles</a></li>
+                    <li><a href="https://github.com/maggyy666" class="github" title="GitHub">GitHub</a></li>
+                    <li><a href="" class="linkedin" title="LinkedIn">LinkedIn</a></li>
                 </ul>
             </nav>
         </header>
-        
+
         <main>
-            <div class="profile">
-                <div class="profile-info">
-                    <h2>Jakub Czyż</h2>
-                        <p>Data Engineer @ <strong>DATABROS</strong>. Based in Kraków.  MSc Data Science @ Krakow University of Technology. Learning <strong>Python</strong>, <strong>Connexion</strong>, <strong>Ansible</strong>. Aspiring to work in finance / quantitative finance</p>
+            <!-- HOME -->
+            <section class="content active" id="home">
+                <div class="profile">
+                    <div class="profile-info">
+                        <h2>Jakub Czyż</h2>
+                        <p>Data Engineer / Big Data @ <strong>DATABROS</strong> with almost 2 years of experience. Based in Kraków. MSc Data Science @ Cracow University of Technology. Passionate about building <strong>scalable solutions for big data platforms</strong>.</p>
+                    </div>
+                    <div class="profile-picture">
+                        <a href="#articles" data-section="articles">
+                            <img src="static/Images/kotek.jpg" alt="Zdjęcie profilowe">
+                        </a>
+                    </div>
                 </div>
-                <div class="profile-picture">
-                    <a href="/articles.html">
-                        <img src="static/Images/kotek.jpg" alt="Zdjęcie profilowe">
+            </section>
+
+            <!-- ABOUT -->
+            <section class="content" id="about">
+                <div class="profile">
+                    <div class="profile-info">
+                        <h2>Welcome to My Portfolio!</h2>
+                        <p class="intro-text">I’m a Data Engineer @ <strong>DATABROS</strong>, working from Kraków, currently pursuing an MSc in <strong>Data Science</strong> at Cracow University of Technology. On a daily basis I work on a large-scale <strong>big data platform</strong> — building and maintaining data pipelines and the infrastructure behind them, with a focus on scalable, reliable solutions.</p>
+                        <p class="intro-text">
+    I hold the <strong>CKAD</strong> (Certified Kubernetes Application Developer) certification since <strong>June 2026</strong>.
+</p>
+                        <p class="intro-text">
+    A big part of my work is <strong>onboarding large-scale data sources</strong> onto the platform — analyzing new datasets, designing ingestion flows and making sure the data lands clean, validated and ready for downstream consumers. I work closely with data providers and stakeholders to smoothly integrate new sources into existing processing workflows, keeping pipelines reliable and maintainable as the platform grows.
+</p>
+                        <p class="intro-text">
+    Currently I'm deepening my expertise in <strong>Apache Airflow</strong>, <strong>S3</strong>-compatible object storage and <strong>ClickHouse</strong> to deliver even more scalable and resilient data platforms.
+</p>
+
+                        <h3>Technologies I use at work:</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/python.svg" alt="Python">
+                                <p>Python</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/spark.svg" alt="Apache Spark">
+                                <p>Apache Spark, PySpark</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/hadoop.svg" alt="HDFS">
+                                <p>HDFS</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/hive.svg" alt="Apache Hive">
+                                <p>Apache Hive</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/kubernetes.svg" alt="Kubernetes">
+                                <p>Kubernetes</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/docker.svg" alt="Docker">
+                                <p>Docker</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/jenkins.svg" alt="Jenkins">
+                                <p>Jenkins</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/airflow.svg" alt="Apache Airflow">
+                                <p>Apache Airflow</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/s3.svg" alt="Amazon S3">
+                                <p>S3</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="static/Images/SVG/clickhouse.svg" alt="ClickHouse">
+                                <p>ClickHouse</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ARTICLES -->
+            <section class="content" id="articles">
+                <div class="tags">
+                    <a href="#" class="tag">ASP .NET Core</a>
+                    <a href="#" class="tag">Machine Learning</a>
+                    <a href="#" class="tag">Python</a>
+                    <a href="#" class="tag">WPF</a>
+                </div>
+                <div class="articles-container">
+                    <a href="/Articles/DS-Salary-Analysis.html" class="article-link">
+                        <section class="article-tile" data-tags="Python">
+                            <div class="article-content">
+                                <h2>Data Science Salaries Analysis</h2>
+                                <div class="tech-stack">
+                                    <img src="static/Images/SVG/python.svg" alt="Python" class="tech-logo">
+                                    <span class="tech-name">Python Desktop Application</span>,
+                                    <span class="tech-name" style="color:#FFC331">TKinter, MatPlotLib,Pandas</span>
+                                </div>
+                                <p>DS Salary Analysis App designed for visualizing and analyzing data science salaries. This intuitive and user-friendly application allows users to explore salary data by job titles, experience levels, and locations using dynamic bar charts, pie charts, and box plots.</p>
+                            </div>
+                            <div class="article-image">
+                                <img src="static/Images/DS_Salary_Analysis/Welcome.gif" alt="WPF App">
+                            </div>
+                        </section>
+                    </a>
+                    <a href="/Articles/GoodFoodMVC.html" class="article-link">
+                        <section class="article-tile" data-tags="ASP .NET Core, MVC">
+                            <div class="article-content">
+                                <h2>GoodFoodMVC</h2>
+                                <div class="tech-stack">
+                                    <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
+                                    <span class="tech-name">MVC Fullstack application</span>,
+                                    <span class="tech-name" style="color:#512BD4;">JQuery, HTML5, Bootstrap, MongoDB</span>
+                                </div>
+                                <div class="article-description">
+                                    <p>GoodFoodMVC is a project based on the ASP .NET MVC framework. The project consists of mechanisms for adding, editing and deleting recipes. Mechanism-based login restricts non-logged-in users from accessing certain features.When it comes to the database storing recipe and user data, MongoDb was used in this project.</p>
+                                </div>
+                            </div>
+                            <div class="article-image">
+                                <img src="static/Images/GoodFoodMVC/Welcome.gif" alt="GoodFoodMVC">
+                            </div>
+                        </section>
+                    </a>
+                    <a href="/Articles/MLVehiclePriceAdvisor.html" class="article-link">
+                        <section class="article-tile" data-tags="Machine Learning, Python">
+                            <div class="article-content">
+                                <h2>MLVehiclePricePredictor</h2>
+                                <div class="tech-stack">
+                                    <img src="static/Images/SVG/python.svg" alt="Python" class="tech-logo">
+                                    <span class="tech-name">Machine Learning application</span>,
+                                    <span class="tech-name" style="color:#FFC331">Selenium, Pandas, Scikit-learn, Joblib</span>
+                                </div>
+                                <p>Python-based web scraper designed to extract vehicle data from the popular vehicle marketplace OTOMOTO. The extracted dataset is then preprocessed and prepared for machine learning (ML) analysis. The project utilizes a random forest ML model to predict optimal pricing for vehicles based on their features.</p>
+                            </div>
+                            <div class="article-image">
+                                <img src="static/Images/random-forest.png" alt="Random Forest">
+                            </div>
+                        </section>
+                    </a>
+                    <a href="/Articles/Rail-Journey-PlannerWPF.html" class="article-link">
+                        <section class="article-tile" data-tags="WPF,ASP .NET Core">
+                            <div class="article-content">
+                                <h2>PKP-ICAA-WPF</h2>
+                                <div class="tech-stack">
+                                    <img src="static/Images/SVG/dotnet.svg" alt=".NET" class="tech-logo">
+                                    <span class="tech-name">WPF Desktop Application</span>,
+                                    <span class="tech-name" style="color:#512BD4">XAML, JSON, C#</span>
+                                </div>
+                                <p>WPF Application designed to facilitate railway ticket booking for users. This intuitive and user-friendly application allows passengers to search for available train routes, view ticket prices, and book tickets seamlessly.</p>
+                            </div>
+                            <div class="article-image">
+                                <img src="static/Images/PKP-ICAA/PKP-ICAA.png" alt="WPF App">
+                            </div>
+                        </section>
                     </a>
                 </div>
-            </div>
+            </section>
         </main>
+
         <footer>
-            <p>&copy; 2025 All rights reserved.</p>
+            <p>&copy; 2026 All rights reserved.</p>
         </footer>
     </div>
 </body>
